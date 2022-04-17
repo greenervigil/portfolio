@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
-import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink } from "react-router-dom";
+import logo from '../../GreenerVigil-logos.jpeg';
 
 const NavBar = styled.div`
     background: #181818;
@@ -19,7 +21,7 @@ const NavBar = styled.div`
         img {
             display: block;
             margin 8px auto;
-            width: 24px;
+            width: 60px;
             height: auto;
 
             &.sub {
@@ -52,7 +54,7 @@ const Nav = styled.nav`
         }
 
         &:hover {
-            color: #ffd700;
+            color: #66b2b2;
 
             svg {
                 opacity: 0;
@@ -65,7 +67,7 @@ const Nav = styled.nav`
 
         &:after {
             content: '';
-            font-size: 9px;
+            font-size: 12px;
             letter-spacing: 2px;
             position: absolute;
             bottom: 0;
@@ -89,6 +91,12 @@ const Nav = styled.nav`
         }
     }
 
+    a.project-link {
+        &:after {
+            content: 'Projects';
+        }
+    }
+
     a.contact-link {
         &:after {
             content: 'Contact';
@@ -96,7 +104,34 @@ const Nav = styled.nav`
     }
 
     a.active {
-        color: #ffd700;
+        svg {
+            color: #66b2b2;
+        }
+    }
+`;
+
+const Ul = styled.ul`
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: block;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    text-align: center;
+
+    li {
+        a {
+            padding: 7px 0;
+            display: block;
+            font-size: 16px;
+        }
+
+        &:hover {
+            svg {
+                color: #66b2b2;
+            }
+        }
     }
 `;
 
@@ -104,7 +139,7 @@ const Sidebar = () => {
     return (
         <NavBar>
             <Link className="logo" to={'/'}>
-                <img src={''} alt={'logo'}/>
+                <img src={logo} alt={'logo'}/>
             </Link>
             <Nav>
                 <NavLink exact="true" activeclassname="active" to="/">
@@ -113,10 +148,25 @@ const Sidebar = () => {
                 <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
                 </NavLink>
+                <NavLink exact="true" activeclassname="active" className="project-link" to="/projects">
+                    <FontAwesomeIcon icon={faProjectDiagram} color="#4d4d4e" />
+                </NavLink>
                 <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </NavLink>
             </Nav>
+            <Ul>
+                <li>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
+                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noreferrer" href="https://github.com/greenervigil">
+                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
+                    </a>
+                </li>
+            </Ul>
         </NavBar>
     )
 };

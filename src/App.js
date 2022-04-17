@@ -1,14 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
+import Sidebar from './components/Sidebar/Sidebar';
+import 'animate.css';
 
 const App = () => {
   return (
     <>
-      <Routes>
-        <Route path="/"  element={<Layout />}/>
-      </Routes>
+      <Sidebar />
     </>
   );
 }
