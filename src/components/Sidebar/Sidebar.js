@@ -13,6 +13,7 @@ const NavBar = styled.div`
     top: 0;
     z-index: 3,
     min-height: 500px;
+    border-right: 1px solid #66b2b2;
 
     .logo {
         display: block;
