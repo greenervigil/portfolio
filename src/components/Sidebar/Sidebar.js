@@ -7,22 +7,22 @@ import logo from '../../GreenerVigil-logos.jpeg';
 
 const NavBar = styled.div`
     background: #181818;
-    width: 60px;
+    width: 80px;
     height: 100%;
     position: absolute;
     top: 0;
     z-index: 3,
     min-height: 500px;
-    border-right: 1px solid #66b2b2;
+    border-right: 1px solid #18cae6;
 
     .logo {
         display: block;
-        padding: 8px 0;
+        margin: 0 auto;
 
         img {
             display: block;
             margin 8px auto;
-            width: 60px;
+            width: 100%;
             height: auto;
 
             &.sub {
@@ -55,7 +55,7 @@ const Nav = styled.nav`
         }
 
         &:hover {
-            color: #66b2b2;
+            color: #18cae6;
 
             svg {
                 opacity: 0;
@@ -94,19 +94,19 @@ const Nav = styled.nav`
 
     a.project-link {
         &:after {
-            content: 'Projects';
+            content: 'PROJECTS';
         }
     }
 
     a.contact-link {
         &:after {
-            content: 'Contact';
+            content: 'CONTACT';
         }
     }
 
     a.active {
         svg {
-            color: #66b2b2;
+            color: #18cae6;
         }
     }
 `;
@@ -130,7 +130,7 @@ const Ul = styled.ul`
 
         &:hover {
             svg {
-                color: #66b2b2;
+                color: #18cae6;
             }
         }
     }
