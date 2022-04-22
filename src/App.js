@@ -3,9 +3,10 @@ import Sidebar from './components/Sidebar/Sidebar';
 import 'animate.css';
 import styled from '@emotion/styled';
 import me from './assets/images/djv_ccexpress.png';
+import { useEffect } from 'react';
 
 const Section = styled.section`
-  height: 100%;
+  height: 100vh;
 
   ul {
     list-style-type: none;
@@ -20,8 +21,8 @@ const Section = styled.section`
   }
   
   span {
-    width: 25vh;
-    height: 25vh;
+    width: 30vh;
+    height: 30vh;
     margin-left: 100px;
     position: absolute;
     background-color: #000;
@@ -42,8 +43,8 @@ const Section = styled.section`
   }
 
   .box {
-    height: 60vh;
-    width: 70vh;
+    height: 50vh;
+    width: 50vw;
     background-color: #18cae6;
     margin: 0 auto;
     text-align: center;
@@ -53,6 +54,30 @@ const Section = styled.section`
 `;
 
 const App = () => {
+
+  useEffect(() => {
+    window.addEventListener("scroll", function (e) {
+      const target = document.querySelectorAll(".scroll");
+    
+      let index = 0,
+        length = target.length;
+    
+      for (index; index < length; index++) {
+        let pos = window.pageYOffset * target[index].dataset.rate;
+    
+        if (target[index].dataset.direction === "horizontal") {
+          let posX = window.pageYOffset * target[index].dataset.ratex;
+          let posY = window.pageYOffset * target[index].dataset.ratey;
+    
+          target[
+            index
+          ].style.transform = `translate3d(${posX/2}px, ${posY}px, 0px)`;
+        } else {
+          target[index].style.transform = `translate3d(0px, ${pos}px, 0px)`;
+        }
+      }
+    });
+  },[])
   return (
     <>
       <Sidebar />

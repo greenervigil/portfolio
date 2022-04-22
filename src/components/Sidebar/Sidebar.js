@@ -8,8 +8,8 @@ import logo from '../../GreenerVigil-logos.jpeg';
 const NavBar = styled.div`
     background: #181818;
     width: 80px;
-    height: 100%;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
     top: 0;
     z-index: 3,
     min-height: 500px;
