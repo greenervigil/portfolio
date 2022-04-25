@@ -4,6 +4,15 @@ import { useEffect } from 'react';
 
 const Section = styled.section`
   height: 100%;
+  font-size 5em;
+
+  h1 {
+    font-size: 0.3em;
+  }
+
+  h4 {
+    font-size: 0.2em;
+  }
 
   ul {
     list-style-type: none;

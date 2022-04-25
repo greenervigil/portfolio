@@ -1,16 +1,26 @@
 import styled from "@emotion/styled";
+import { faBootstrap, faHtml5, faJs, faReact, faWordpress } from "@fortawesome/free-brands-svg-icons";
+import { faMobile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Container = styled.div`
     margin: 0 auto;
 
+    h1 {
+        color: #18cae6;
+        text-align: center;
+    }
+
     ol.even {
         position: relative;
         left: 5.45455rem;
+        padding-left: 35%;
     }
 
     ol.odd {
         position: relative;
         margin-bottom: -4.5%;
+        padding-left: 35%;
     }
 
     .hex {
@@ -46,30 +56,67 @@ const Container = styled.div`
     }
 
     .hex:hover {
-        background: #ea7432;
+        background: #18cae6;
         cursor: pointer;
+    }
+
+    .hex-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+
+        transform: translate(-50%, -50%) rotate(90deg);
+
+        color: #4d4d4e;
     }
 `;
 
 const Projects = () => {
     return (
-        <>
+        <Container>
             <h1>Projects</h1>
-            <Container>
-                <ol className="odd">
-                    <li className="hex"></li>
-                    <li className="hex"></li>
-                    <li className="hex"></li>
-                    <li className="hex"></li>
-                </ol>
-                <ol className="even">
-                <li className="hex"></li>
-                <li className="hex"></li>
-                <li className="hex"></li>
-                <li className="hex"></li>
-                </ol>
-            </Container>
-        </>
+            <ol className="odd">
+                <li className="hex">
+                    <div className="hex-content">
+                        <FontAwesomeIcon icon={faJs} size="lg"></FontAwesomeIcon>
+                        <p>JavaScript</p>
+                    </div>
+                </li>
+                <li className="hex">
+                <div className="hex-content">
+                        <FontAwesomeIcon icon={faHtml5} size="lg"></FontAwesomeIcon>
+                        <p>HTML</p>
+                    </div>
+                </li>
+                <li className="hex">
+                <div className="hex-content">
+                        <FontAwesomeIcon icon={faBootstrap} size="lg"></FontAwesomeIcon>
+                        <p>Bootstrap</p>
+                    </div>
+                </li>
+            </ol>
+            <ol className="even">
+                <li className="hex">
+                    <div className="hex-content">
+                        <FontAwesomeIcon icon={faReact} size="lg"></FontAwesomeIcon>
+                        <p>React</p>
+                    </div>
+                </li>
+                <li className="hex">
+                    <div className="hex-content">
+                        <FontAwesomeIcon icon={faMobile} size="lg"></FontAwesomeIcon>
+                        <p>Mobile</p>
+                    </div>
+                </li>
+                <li className="hex">
+                    <div className="hex-content">
+                        <FontAwesomeIcon icon={faWordpress} size="lg"></FontAwesomeIcon>
+                        <p>Wordpress</p>
+                    </div>
+                </li>
+            </ol>
+        </Container>
     );
 }
 
