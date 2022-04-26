@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../GreenerVigil-logos.jpeg';
@@ -92,6 +92,12 @@ const Nav = styled.nav`
         }
     }
 
+    a.experience-link {
+        &:after {
+            content: 'EXPERIENCE';
+        }
+    }
+
     a.project-link {
         &:after {
             content: 'PROJECTS';
@@ -149,6 +155,9 @@ const Sidebar = () => {
                 <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
                 </NavLink>
+                <NavLink exact="true" activeclassname="active" className="experience-link" to="/experience">
+                    <FontAwesomeIcon icon={faFile} color="#4d4d4e" />
+                </NavLink>
                 <NavLink exact="true" activeclassname="active" className="project-link" to="/projects">
                     <FontAwesomeIcon icon={faProjectDiagram} color="#4d4d4e" />
                 </NavLink>
@@ -169,6 +178,7 @@ const Sidebar = () => {
                 </li>
             </Ul>
         </NavBar>
+
     )
 };
 
