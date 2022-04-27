@@ -1,186 +1,119 @@
-import './App.css';
+import { useEffect } from 'react';
 import styled from '@emotion/styled';
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, NavLink } from "react-router-dom";
-import logo from './GreenerVigil-logos.jpeg';
-import 'animate.css';
+import me from './assets/images/djv_ccexpress.png';
+import Sidebar from './components/Sidebar/Sidebar';
 
-const NavBar = styled.div`
-    background: #181818;
-    width: 80px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    z-index: 3,
-    min-height: 500px;
-    border-right: 1px solid #18cae6;
+import './App.css';
 
-    .logo {
-        display: block;
-        margin: 0 auto;
+const Section = styled.section`
+  max-width: 1900px;
+  height: 100%;
+  font-size: 5rem;
 
-        img {
-            display: block;
-            margin 8px auto;
-            width: 100%;
-            height: auto;
+  h1 {
+    font-size: 0.3em;
+  }
 
-            &.sub {
-                width: 50px;
-            }
-        }
-    }
-`;
+  h4 {
+    font-size: 0.2em;
+  }
 
-const Nav = styled.nav`
-    display: block;
-    text-align: center;
-    position: absolute;
-    height: 210px;
-    top: 50%;
-    margin-top: -120px;
-    width: 100%;
-
-    a {
-        font-size: 22px;
-        color: #4d4d4e;
-        display: block;
-        line-height: 51px;
-        height: 51px;
-        position: relative;
-        text-decoration: none;
-
-        i {
-            transition: all 0.3s ease-out;
-        }
-
-        &:hover {
-            color: #18cae6;
-
-            svg {
-                opacity: 0;
-            }
-
-            &:after {
-                opacity: 1;
-            }
-        }
-
-        &:after {
-            content: '';
-            font-size: 12px;
-            letter-spacing: 2px;
-            position: absolute;
-            bottom: 0;
-            display: block;
-            width: 100%;
-            text-align: center;
-            opacity: 0;
-            transition: all 0.3s ease-out;
-        }
-
-        &:first-of-type {
-            &:after {
-                content: 'HOME';
-            }
-        }
-    }
-
-    a.about-link {
-        &:after {
-            content: 'ABOUT';
-        }
-    }
-
-    a.experience-link {
-        &:after {
-            content: 'EXPERIENCE';
-        }
-    }
-
-    a.project-link {
-        &:after {
-            content: 'PROJECTS';
-        }
-    }
-
-    a.contact-link {
-        &:after {
-            content: 'CONTACT';
-        }
-    }
-
-    a.active {
-        svg {
-            color: #18cae6;
-        }
-    }
-`;
-
-const Ul = styled.ul`
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: block;
+  ul {
+    list-style-type: none;
     padding: 0;
-    list-style: none;
     margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    align-items: middle;
+    place-items: center;
+    height: 100vh;
+    font-size 5em;
+  }
+  
+  span {
+    width: 35vh;
+    height: 35vh;
+    margin-left: 100px;
+    position: absolute;
+    background-color: #000;
+    background-image: url(${me});
+    background-position: 0% 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    border: 3px solid #18cae6;
+    border-radius: 50%;
+    z-index: 999;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  .scroll {
+    color: #000;
+    text-shadow: -1px 0 #18cae6, 0 3px #18cae6, 3px 0 #18cae6, 0 -1px #18cae6;
+  }
+
+  .box {
+    height: 40vh;
+    width: 30vw;
+    background-color: #18cae6;
+    margin: 0 auto;
     text-align: center;
-
-    li {
-        a {
-            padding: 7px 0;
-            display: block;
-            font-size: 16px;
-        }
-
-        &:hover {
-            svg {
-                color: #18cae6;
-            }
-        }
-    }
+    padding-top: 0.3em;
+    border-radius: 10px;
+  }
 `;
 
 const App = () => {
+    useEffect(() => {
+        window.addEventListener("scroll", function (e) {
+          const target = document.querySelectorAll(".scroll");
+        
+          let index = 0,
+            length = target.length;
+        
+          for (index; index < length; index++) {
+            let pos = window.pageYOffset * target[index].dataset.rate;
+        
+            if (target[index].dataset.direction === "horizontal") {
+              let posX = window.pageYOffset * target[index].dataset.ratex;
+              let posY = window.pageYOffset * target[index].dataset.ratey;
+        
+              target[
+                index
+              ].style.transform = `translate3d(${posX}px, ${posY}px, 0px)`;
+            } else {
+              target[index].style.transform = `translate3d(0px, ${pos}px, 0px)`;
+            }
+          }
+        });
+    },[]);
+
   return (
     <>
-      <NavBar>
-            <Link className="logo" to={'/'}>
-                <img src={logo} alt={'logo'}/>
-            </Link>
-            <Nav>
-                <NavLink exact="true" activeclassname="active" to="/">
-                    <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
-                    <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="experience-link" to="/experience">
-                    <FontAwesomeIcon icon={faFile} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="project-link" to="/projects">
-                    <FontAwesomeIcon icon={faProjectDiagram} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
-                    <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-                </NavLink>
-            </Nav>
-            <Ul>
-                <li>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
-                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/greenervigil">
-                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
-                    </a>
-                </li>
-            </Ul>
-        </NavBar>
+      <Sidebar />
+
+      <main>
+        <Section>
+            <ul>
+                <li className="scroll" data-rate="-2">Daniel</li>
+                <li className="scroll" data-rate="-1">&nbsp;Greener-</li>
+                <li className="scroll" data-rate="3">Vigil</li>
+            </ul>
+            <div style={{width: '50vw', overflow: 'hidden', whiteSpace: 'nowrap'}}>
+                <span className="scroll" data-rateY="1" data-rateX="1" data-direction="horizontal"></span>
+            </div>
+        </Section>
+        <Section>
+            <div className="box">
+                <h1>Daniel Greener-Vigil</h1>
+                <h4>Software Engineer / </h4>
+                <h4>Web Developer</h4>
+            </div>
+        </Section>
+      </main>
     </>
   );
 }
