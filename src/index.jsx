@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import App from './App';
 import Exp from './routes/exp';
 import Projects from './routes/projects';
 import Contact from './routes/contact';
@@ -17,13 +18,7 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Layout />}>
-                  <Route index element={<Home />} />
-                </Route>
-                <Route path="/experience" element={<Exp />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path='/about' element={<About />} />
-                <Route path='/contact' element={<Contact />} />
+                <Route path="/" element={<App />} />
             </Routes>
         </BrowserRouter>
   </React.StrictMode>

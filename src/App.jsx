@@ -1,5 +1,12 @@
 import { useEffect } from 'react';
 import styled from '@emotion/styled';
+import { Routes, Route } from 'react-router-dom';
+import Exp from './routes/exp';
+import Projects from './routes/projects';
+import Contact from './routes/contact';
+import About from './routes/about';
+import Home from './routes/home';
+import Layout from './components/Layout/layout';
 import me from './assets/images/djv_ccexpress.png';
 import Sidebar from './components/Sidebar/Sidebar';
 
@@ -93,27 +100,15 @@ const App = () => {
 
   return (
     <>
-      <Sidebar />
-
-      <main>
-        <Section>
-            <ul>
-                <li className="scroll" data-rate="-2">Daniel</li>
-                <li className="scroll" data-rate="-1">&nbsp;Greener-</li>
-                <li className="scroll" data-rate="3">Vigil</li>
-            </ul>
-            <div style={{width: '50vw', overflow: 'hidden', whiteSpace: 'nowrap'}}>
-                <span className="scroll" data-rateY="1" data-rateX="1" data-direction="horizontal"></span>
-            </div>
-        </Section>
-        <Section>
-            <div className="box">
-                <h1>Daniel Greener-Vigil</h1>
-                <h4>Software Engineer / </h4>
-                <h4>Web Developer</h4>
-            </div>
-        </Section>
-      </main>
+      <Routes>
+                <Route path="/" element={<Layout />}>
+                  <Route index element={<Home />} />
+                </Route>
+                <Route path="/experience" element={<Exp />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/contact' element={<Contact />} />
+            </Routes>
     </>
   );
 }
