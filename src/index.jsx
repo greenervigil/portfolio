@@ -8,6 +8,8 @@ import Contact from './routes/contact';
 import About from './routes/about';
 import reportWebVitals from './reportWebVitals';
 import { createRoot } from 'react-dom/client';
+import Layout from './components/Layout/layout';
+import Home from './routes/home';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -16,7 +18,9 @@ root.render(
   <React.StrictMode>
       <BrowserRouter>
             <Routes>
-                <Route path="/" element={<App />} />
+                <Route path="/" element={<Layout />}>
+                  <Route index element={<Home />} />
+                </Route>
                 <Route path="/experience" element={<Exp />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path='/about' element={<About />} />

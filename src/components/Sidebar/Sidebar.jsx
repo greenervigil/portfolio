@@ -131,7 +131,7 @@ const Ul = styled.ul`
         a {
             padding: 7px 0;
             display: block;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         &:hover {
