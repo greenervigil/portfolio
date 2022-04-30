@@ -1,15 +1,9 @@
 import React from 'react';
 import './index.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import Exp from './routes/exp';
-import Projects from './routes/projects';
-import Contact from './routes/contact';
-import About from './routes/about';
 import reportWebVitals from './reportWebVitals';
 import { createRoot } from 'react-dom/client';
-import Layout from './components/Layout/layout';
-import Home from './routes/home';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -17,9 +11,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
       <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App />} />
-            </Routes>
+          <App />
         </BrowserRouter>
   </React.StrictMode>
 );
