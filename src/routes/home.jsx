@@ -32,18 +32,14 @@ const Section = styled.section`
   span {
     width: 35vh;
     height: 35vh;
-    margin-left: 100px;
     position: absolute;
     background-color: #000;
     background-image: url(${me});
     background-position: 0% 50%;
     background-size: 100%;
     background-repeat: no-repeat;
-    bottom: 0;
-    left: 0;
     border: 3px solid #18cae6;
     border-radius: 50%;
-    z-index: 999;
     overflow: auto;
     white-space: nowrap;
   }
@@ -60,7 +56,7 @@ const Section = styled.section`
     margin: 0 auto;
     text-align: center;
     padding-top: 0.3em;
-    border-radius: 10px;
+    border-radius: 4px;
   }
 `;
 
@@ -95,17 +91,17 @@ const Home = () => {
             <ul>
                 <li className="scroll" data-rate="-2">Daniel</li>
                 <li className="scroll" data-rate="-1">&nbsp;Greener-</li>
-                <li className="scroll" data-rate="3">Vigil</li>
+                <li className="scroll" data-rate="2">Vigil</li>
             </ul>
-            <div style={{width: '50vw', overflow: 'hidden', whiteSpace: 'nowrap'}}>
-                <span className="scroll" data-rateY="1" data-rateX="1" data-direction="horizontal"></span>
-            </div>
         </Section>
         <Section>
             <div className="box">
                 <h1>Daniel Greener-Vigil</h1>
                 <h4>Software Engineer / </h4>
                 <h4>Web Developer</h4>
+                <div style={{width: '12vw', overflow: 'hidden', whiteSpace: 'nowrap'}}>
+                <span></span>
+            </div>
             </div>
         </Section>
       </main>
