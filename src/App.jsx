@@ -1,11 +1,4 @@
 import { useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Exp from './routes/exp';
-import Projects from './routes/projects';
-import Contact from './routes/contact';
-import About from './routes/about';
-import Home from './routes/home';
-import Layout from './components/Layout/layout';
 
 import './App.css';
 
@@ -36,14 +29,7 @@ const App = () => {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} /><Route path="/experience" element={<Exp />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-        </Route>
-      </Routes>
+      
     </>
   );
 }
