@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Timeline = styled.main`
     padding-top: 50px;
+    width: 100vw;
 
     .heading {
         display: flex;

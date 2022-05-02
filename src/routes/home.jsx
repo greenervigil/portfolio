@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import me from '../assets/images/djv_ccexpress.png';
 
 const Section = styled.section`
-  max-width: 1900px;
+  width: 100%;
   height: 100%;
   font-size: 5rem;
 
@@ -16,6 +16,68 @@ const Section = styled.section`
     font-size: 0.2em;
   }
 
+  .sec a {
+    font-size: .3em;
+    padding-bottom: 60px;
+    margin-bottom: 20px;
+    margin-left: 50%;
+  }
+
+  .sec a span {
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #18cae6;
+    border-bottom: 1px solid #18cae6;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: sdb07 2s infinite;
+    animation: sdb07 2s infinite;
+    opacity: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #18cae6;
+  }
+
+  .sec a span:nth-of-type(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  .sec a span:nth-of-type(2) {
+    top: 16px;
+    -webkit-animation-delay: .15s;
+    animation-delay: .15s;
+  }
+  .sec a span:nth-of-type(3) {
+    top: 32px;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+
+  @-webkit-keyframes sdb07 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb07 {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -25,13 +87,19 @@ const Section = styled.section`
     justify-content: center;
     align-items: middle;
     place-items: center;
-    height: 100vh;
+    height: 90vh;
     font-size 5em;
   }
+
+  .photo {
+    width: 12vw;
+    overflow: hidden;
+    whiteSpace: nowrap;
+  }
   
-  span {
-    width: 35vh;
-    height: 35vh;
+  .photo span {
+    width: 40vh;
+    height: 40vh;
     position: absolute;
     background-color: #000;
     background-image: url(${me});
@@ -51,12 +119,25 @@ const Section = styled.section`
 
   .box {
     height: 40vh;
-    width: 30vw;
+    width: 40vw;
     background-color: #18cae6;
     margin: 0 auto;
     text-align: center;
     padding-top: 0.3em;
     border-radius: 4px;
+    overflow-y: hidden;
+  }
+
+  @media only screen and (max-width: 600px) {
+    ul {
+      display: none;
+    }
+
+    .box {
+      heigh: 50vh;
+      width: 80vw;
+      margin-top: 30%;
+    }
   }
 `;
 
@@ -93,13 +174,16 @@ const Home = () => {
                 <li className="scroll" data-rate="-1">&nbsp;Greener-</li>
                 <li className="scroll" data-rate="2">Vigil</li>
             </ul>
+            <div className="sec">
+              <a href="#me"><span></span>Scroll</a>
+            </div>
         </Section>
         <Section>
-            <div className="box">
+            <div className="box" id="me">
                 <h1>Daniel Greener-Vigil</h1>
                 <h4>Software Engineer / </h4>
                 <h4>Web Developer</h4>
-                <div style={{width: '12vw', overflow: 'hidden', whiteSpace: 'nowrap'}}>
+                <div className="photo">
                 <span></span>
             </div>
             </div>
