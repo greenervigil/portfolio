@@ -4,8 +4,7 @@ import styled from "@emotion/styled";
 import me from '../assets/images/djv_ccexpress.png';
 
 const Section = styled.section`
-  width: 100%;
-  height: 100%;
+  height: 100vh;
   font-size: 5rem;
 
   h1 {
@@ -14,68 +13,6 @@ const Section = styled.section`
 
   h4 {
     font-size: 0.2em;
-  }
-
-  .sec a {
-    font-size: .3em;
-    padding-bottom: 60px;
-    margin-bottom: 20px;
-    margin-left: 50%;
-  }
-
-  .sec a span {
-    left: 50%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #18cae6;
-    border-bottom: 1px solid #18cae6;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: sdb07 2s infinite;
-    animation: sdb07 2s infinite;
-    opacity: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: #18cae6;
-  }
-
-  .sec a span:nth-of-type(1) {
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-  }
-  .sec a span:nth-of-type(2) {
-    top: 16px;
-    -webkit-animation-delay: .15s;
-    animation-delay: .15s;
-  }
-  .sec a span:nth-of-type(3) {
-    top: 32px;
-    -webkit-animation-delay: .3s;
-    animation-delay: .3s;
-  }
-
-  @-webkit-keyframes sdb07 {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes sdb07 {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
   }
 
   ul {
@@ -107,6 +44,7 @@ const Section = styled.section`
     background-size: 100%;
     background-repeat: no-repeat;
     border: 3px solid #18cae6;
+    text-shadow: 0 0 10px #18cae6;
     border-radius: 50%;
     overflow: auto;
     white-space: nowrap;
@@ -174,9 +112,6 @@ const Home = () => {
                 <li className="scroll" data-rate="-1">&nbsp;Greener-</li>
                 <li className="scroll" data-rate="2">Vigil</li>
             </ul>
-            <div className="sec">
-              <a href="#me"><span></span>Scroll</a>
-            </div>
         </Section>
         <Section>
             <div className="box" id="me">

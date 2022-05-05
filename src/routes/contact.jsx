@@ -130,7 +130,7 @@ const Contact = () => {
 
     useEffect(() => {
         tl.current = gsap.timeline({paused: true});
-        const flap = CSSRulePlugin.getRule(".envelope:before"); 
+        const flap = CSSRulePlugin.getRule('.envelope:before'); 
         
         tl.current.to(flap, { 
             duration: 0.5, 
