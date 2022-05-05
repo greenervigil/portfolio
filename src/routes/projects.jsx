@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
 import { faBootstrap, faHtml5, faJs, faReact, faWordpress } from "@fortawesome/free-brands-svg-icons";
 import { faMobile } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import MenutItem from "../components/ProjectMenu/menuItem";
 
 const Container = styled.main`
+    width: 100vw;
     margin: 0 auto;
 
     h1 {
@@ -56,7 +58,23 @@ const Container = styled.main`
     }
 
     .hex:hover {
+        color: #18cae6;
+        text-shadow: 0 0 10px #18cae6;
+        cursor: pointer;
+    }
+
+    .active {
         background: #18cae6;
+        color: #1e2530;
+
+        .hex-content {
+            color: #1e2530;
+        }
+    }
+
+    .active:hover {
+        color: #1e2530;
+        text-shadow: 0 0 10px #1e2530;
         cursor: pointer;
     }
 
@@ -68,61 +86,56 @@ const Container = styled.main`
 
         transform: translate(-50%, -50%) rotate(90deg);
 
-        color: #4d4d4e;
+        color: #18cae6;
     }
 `;
 
 const Projects = () => {
+    const [filter, setFilter] = useState('');
+
+    function handleFilter(event) {
+        event.preventDefault();
+        setFilter(event.target.innerHTML);
+        event.target.parentNode.className += ' active'
+    }
+
     return (
+        <>
         <Container>
             <h1>Projects</h1>
             <ol className="odd">
-                <li className="hex">
+                <li className="hex active" onClick={handleFilter}>
                     <div className="hex-content">
-                        <FontAwesomeIcon icon={faJs} size="xl"></FontAwesomeIcon>
-                        <p>JavaScript</p>
+                        <p>All</p>
                     </div>
                 </li>
-                <li className="hex">
-                <div className="hex-content">
-                        <FontAwesomeIcon icon={faHtml5} size="xl"></FontAwesomeIcon>
-                        <p>HTML</p>
-                    </div>
+                <li className="hex" onClick={handleFilter}>
+                    <MenutItem icon={faJs} title="JavaScript" />
                 </li>
-                <li className="hex">
-                    <div className="hex-content">
-                        <FontAwesomeIcon icon={faBootstrap} size="xl"></FontAwesomeIcon>
-                        <p>Bootstrap</p>
-                    </div>
+                <li className="hex" onClick={handleFilter}>
+                    <MenutItem icon={faHtml5} title="HTML" />
                 </li>
-                <li className="hex">
-                    <div className="hex-content">
-                        <FontAwesomeIcon icon={faBootstrap} size="xl"></FontAwesomeIcon>
-                        <p>Bootstrap</p>
-                    </div>
+                <li className="hex" onClick={handleFilter}>
+                    <MenutItem icon={faBootstrap} title="Boostrap" />
                 </li>
             </ol>
-            <ol className="even">
+            <ol className="even" onClick={handleFilter}>
                 <li className="hex">
-                    <div className="hex-content">
-                        <FontAwesomeIcon icon={faReact} size="xl"></FontAwesomeIcon>
-                        <p>React</p>
-                    </div>
+                    <MenutItem icon={faReact} title="React" />
                 </li>
-                <li className="hex">
-                    <div className="hex-content">
-                        <FontAwesomeIcon icon={faMobile} size="xl"></FontAwesomeIcon>
-                        <p>Mobile</p>
-                    </div>
+                <li className="hex" onClick={handleFilter}>
+                    <MenutItem icon={faMobile} title="Mobile" />
                 </li>
-                <li className="hex">
-                    <div className="hex-content">
-                        <FontAwesomeIcon icon={faWordpress} size="xl"></FontAwesomeIcon>
-                        <p>Wordpress</p>
-                    </div>
+                <li className="hex" onClick={handleFilter}>
+                    <MenutItem icon={faWordpress} title="Wordpress" />
                 </li>
-            </ol>
+            </ol>   
         </Container>
+
+        <div>
+            <p>{filter}</p>
+        </div>
+        </>
     );
 }
 
