@@ -1,33 +1,18 @@
 import styled from "@emotion/styled";
 import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from '../../GreenerVigil-logos.jpeg';
 
 const NavBar = styled.div`
     background: #181818;
-    width: 80px;
-    height: 100vh;
+    width: 100px;
+    height: 50vh;
+    margin: 20px;
+    top: 25%;
     position: fixed;
-    top: 0;
-    z-index: 3,
-    min-height: 500px;
-    border-right: 1px solid #18cae6;
-
-    .logo {
-        display: block;
-        margin: 0 auto;
-
-        img {
-            display: block;
-            margin 8px auto;
-            width: 100%;
-            height: auto;
-
-            &.sub {
-                width: 50px;
-            }
-        }
-    }
+    z-index: 3;
+    box-shadow: 10px 5px 5px #18cae6;
+    border: 1px solid #18cae6;
+    border-radius: 10px;
 `;
 
 const Nav = styled.nav`
@@ -115,37 +100,9 @@ const Nav = styled.nav`
     }
 `;
 
-const Ul = styled.ul`
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: block;
-    padding: 0;
-    list-style: none;
-    margin: 0;
-    text-align: center;
-
-    li {
-        a {
-            padding: 7px 0;
-            display: block;
-            font-size: 20px;
-        }
-
-        &:hover {
-            svg {
-                color: #18cae6;
-            }
-        }
-    }
-`;
-
 const Sidebar = () => {
     return (
         <NavBar>
-            {/*<Link className="logo" to={'/'}>
-                <img src={logo} alt={'logo'}/>
-            </Link>*/}
             <Nav>
                 <a href="/">
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
@@ -163,7 +120,6 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </a>
             </Nav>
-            
         </NavBar>
 
     )

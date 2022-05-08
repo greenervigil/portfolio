@@ -1,30 +1,8 @@
 import styled from "@emotion/styled";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Timeline = styled.main`
     padding-top: 50px;
     width: 100vw;
-
-    .heading {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-
-        a {
-            width: 250px;
-            height: 30px;
-            text-align: center;
-            background-color: #18cae6;
-            color: #000;
-            border: 1px solid #18cae6;
-            border-radius: 4px;
-            text-decoration: none;
-            padding: 5px 0;
-        }
-    }
 
     h1 {
         text-align: center;
@@ -160,15 +138,9 @@ const Timeline = styled.main`
 const Exp = () => {
     return (
         <Timeline>
-            <div className="heading" id="experience">
+            <div id="experience">
                 <h1>Experience</h1>
-
-                <a target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/1gmmq6iEGh4FPSr18xBJsINFKs_HUvfWb9hAYEjUJOgo/">
-                    <FontAwesomeIcon icon={faDownload} size={"lg"}/>
-                    &nbsp;Download CV/Resume
-                </a>
             </div>
-            
             <div className="timeline">
                 <div className="container right">
                     <div className="content">

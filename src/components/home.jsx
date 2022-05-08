@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import styled from "@emotion/styled";
 
+import background from '../assets/images/freevector-19-trons.jpg';
+
 const Section = styled.section`
   height: 100vh;
   font-size: 5rem;
+  background-image: url(${background});
 
   ul {
     list-style-type: none;

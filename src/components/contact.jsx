@@ -1,9 +1,15 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap-trial';
 import { CSSRulePlugin } from 'gsap-trial/CSSRulePlugin';
+
 import styled from "@emotion/styled";
+import background from '../assets/images/yinM3E.jpg'
 
 gsap.registerPlugin(CSSRulePlugin);
+
+const StyledDiv = styled.div`
+  backgroud-image: url(${background});
+`;
 
 const H1 = styled.h1`
     text-align: center;
@@ -170,7 +176,7 @@ const Contact = () => {
 
 
     return (
-        <div id="contact">
+        <StyledDiv id="contact">
             <H1>Contact</H1>
             <Container>
             <div className="content" >
@@ -194,7 +200,7 @@ const Contact = () => {
                 <div className="shadow"></div>
             </div>
             </Container> 
-        </div>
+        </StyledDiv>
     )
 }
 

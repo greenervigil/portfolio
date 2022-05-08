@@ -1,14 +1,25 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styled from "@emotion/styled";
 
-import me from '../assets/images/djv_ccexpress.png';
+import background from '../assets/images/yinM3E.jpg';
+
+
+const StyledDiv = styled.div`
+    width: 100vw;
+    background-image: url(${background});
+    background-size: contain;
+    padding: 50px 0;
+`;
 
 const Section = styled.section`
+    margin-top: 50px;
+
     .box {
-        height: 40vh;
-        width: 40vw;
+        height: 70vh;
+        width: 50vw;
         background-color: #18cae6;
         margin: 0 auto;
         text-align: center;
@@ -26,6 +37,22 @@ const Section = styled.section`
         }
     }
 
+    .download {
+        background-color: #000;
+        border: 1px solid #000;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #18cae6;
+    }
+
+    .download:hover {
+        background-color: #18cae6;
+        border: 1px solid #000;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #000;
+    }
+
     .photo {
         width: 12vw;
         overflow: hidden;
@@ -37,7 +64,6 @@ const Section = styled.section`
         height: 40vh;
         position: absolute;
         background-color: #000;
-        background-image: url(${me});
         background-position: 0% 50%;
         background-size: 100%;
         background-repeat: no-repeat;
@@ -60,7 +86,7 @@ const Section = styled.section`
 
 const About = () => {
     return (
-        <>
+        <StyledDiv>
             <Section>
                 <div className="box" id="about">
                     <h1>Daniel Greener-Vigil</h1>
@@ -68,19 +94,18 @@ const About = () => {
                     <h4>Mentor</h4>
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
-                            <FontAwesomeIcon icon={faLinkedin} color="#000"/>
+                            <FontAwesomeIcon icon={faLinkedin} size="xl" color="#000"/>
                         </a>
                         <a target="_blank" rel="noreferrer" href="https://github.com/greenervigil">
-                            <FontAwesomeIcon icon={faGithub} color="#000"/>
+                            <FontAwesomeIcon icon={faGithub} size="xl" color="#000"/>
+                        </a>
+                        <a className="download" target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/1gmmq6iEGh4FPSr18xBJsINFKs_HUvfWb9hAYEjUJOgo/">
+                            <FontAwesomeIcon icon={faDownload} size={"lg"}/>&nbsp;Download CV/Resume
                         </a>
                     </div>
-                    
-                    {/*<div className="photo">
-                        <span></span>
-    </div>*/}
                 </div>
             </Section>
-        </>
+        </StyledDiv>
     );
 }
 

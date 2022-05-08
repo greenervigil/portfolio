@@ -4,12 +4,11 @@ import styled from "@emotion/styled";
 
 const NavBar = styled.div`
     background: #181818;
-    width: 100vw;
+    width: 100%;
     height: 50px;
     position: fixed;
     bottom: 0;
-    z-index: 999,
-    min-height: 500px;
+    z-index: 999;
     border-top: 1px solid #18cae6;
 `;
 
