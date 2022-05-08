@@ -1,19 +1,9 @@
 import { useEffect } from "react";
 import styled from "@emotion/styled";
 
-import me from '../assets/images/djv_ccexpress.png';
-
 const Section = styled.section`
   height: 100vh;
   font-size: 5rem;
-
-  h1 {
-    font-size: 0.3em;
-  }
-
-  h4 {
-    font-size: 0.2em;
-  }
 
   ul {
     list-style-type: none;
@@ -27,54 +17,17 @@ const Section = styled.section`
     height: 90vh;
     font-size 5em;
   }
-
-  .photo {
-    width: 12vw;
-    overflow: hidden;
-    whiteSpace: nowrap;
-  }
-  
-  .photo span {
-    width: 40vh;
-    height: 40vh;
-    position: absolute;
-    background-color: #000;
-    background-image: url(${me});
-    background-position: 0% 50%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    border: 3px solid #18cae6;
-    text-shadow: 0 0 10px #18cae6;
-    border-radius: 50%;
-    overflow: auto;
-    white-space: nowrap;
-  }
   
   .scroll {
     color: #000;
     text-shadow: -1px 0 #18cae6, 0 3px #18cae6, 3px 0 #18cae6, 0 -1px #18cae6;
   }
 
-  .box {
-    height: 40vh;
-    width: 40vw;
-    background-color: #18cae6;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 0.3em;
-    border-radius: 4px;
-    overflow-y: hidden;
-  }
+  
 
   @media only screen and (max-width: 600px) {
     ul {
       display: none;
-    }
-
-    .box {
-      heigh: 50vh;
-      width: 80vw;
-      margin-top: 30%;
     }
   }
 `;
@@ -105,25 +58,15 @@ const Home = () => {
     },[]);
 
     return (
-        <main>
+      <>
         <Section>
             <ul>
-                <li className="scroll" data-rate="-2">Daniel</li>
-                <li className="scroll" data-rate="-1">&nbsp;Greener-</li>
-                <li className="scroll" data-rate="2">Vigil</li>
+              <li className="scroll" data-rate="-2">Daniel</li>
+              <li className="scroll" data-rate="-1">&nbsp;Greener-</li>
+              <li className="scroll" data-rate="2">Vigil</li>
             </ul>
         </Section>
-        <Section>
-            <div className="box" id="me">
-                <h1>Daniel Greener-Vigil</h1>
-                <h4>Software Engineer / </h4>
-                <h4>Web Developer</h4>
-                <div className="photo">
-                <span></span>
-            </div>
-            </div>
-        </Section>
-      </main>
+      </>
     )
 }
 

@@ -101,7 +101,7 @@ const Projects = () => {
 
     return (
         <>
-        <Container>
+        <Container id="projects">
             <h1>Projects</h1>
             <ol className="odd">
                 <li className="hex active" onClick={handleFilter}>

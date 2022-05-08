@@ -1,15 +1,65 @@
 import styled from "@emotion/styled";
 
-const H1 = styled.h1`
-    text-align: center;
-    color: #18cae6;
+import me from '../assets/images/djv_ccexpress.png';
+
+const Section = styled.section`
+    .box {
+        height: 40vh;
+        width: 40vw;
+        background-color: #18cae6;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 0.3em;
+        border-radius: 4px;
+        overflow-y: hidden;
+    }
+
+    .photo {
+        width: 12vw;
+        overflow: hidden;
+        whiteSpace: nowrap;
+      }
+      
+      .photo span {
+        width: 40vh;
+        height: 40vh;
+        position: absolute;
+        background-color: #000;
+        background-image: url(${me});
+        background-position: 0% 50%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border: 3px solid #18cae6;
+        text-shadow: 0 0 10px #18cae6;
+        border-radius: 50%;
+        overflow: auto;
+        white-space: nowrap;
+      }
+
+    @media only screen and (max-width: 600px) {
+    
+        .box {
+          heigh: 50vh;
+          width: 80vw;
+          margin-top: 30%;
+        }
+      }
 `;
 
 const About = () => {
     return (
-        <main>
-            <H1>About</H1>
-        </main>
+        <>
+            <Section>
+                <div className="box" id="about">
+                    <h1>Daniel Greener-Vigil</h1>
+                    <h4>Software Engineer / </h4>
+                    <h4>Web Developer</h4>
+                    {/*<div className="photo">
+                        <span></span>
+    </div>*/}
+                </div>
+            </Section>
+        </>
     );
 }
 

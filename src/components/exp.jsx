@@ -160,7 +160,7 @@ const Timeline = styled.main`
 const Exp = () => {
     return (
         <Timeline>
-            <div className="heading">
+            <div className="heading" id="experience">
                 <h1>Experience</h1>
 
                 <a target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/1gmmq6iEGh4FPSr18xBJsINFKs_HUvfWb9hAYEjUJOgo/">

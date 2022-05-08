@@ -170,7 +170,7 @@ const Contact = () => {
 
 
     return (
-        <main>
+        <div id="contact">
             <H1>Contact</H1>
             <Container>
             <div className="content" >
@@ -194,7 +194,7 @@ const Contact = () => {
                 <div className="shadow"></div>
             </div>
             </Container> 
-        </main>
+        </div>
     )
 }
 
