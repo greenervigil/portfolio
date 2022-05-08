@@ -1,12 +1,12 @@
 import React from 'react';
 import './index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Exp from './routes/exp';
-import Projects from './routes/projects';
-import Contact from './routes/contact';
-import About from './routes/about';
-import Home from './routes/home';
-import Layout from './components/Layout/layout';
+import Exp from './components/exp';
+import Projects from './components/projects';
+import Contact from './components/contact';
+import About from './components/about';
+import Home from './components/home';
+import Layout from './components/layout';
 import reportWebVitals from './reportWebVitals';
 import { createRoot } from 'react-dom/client';
 

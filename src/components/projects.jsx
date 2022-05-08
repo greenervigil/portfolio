@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { faBootstrap, faHtml5, faJs, faReact, faWordpress } from "@fortawesome/free-brands-svg-icons";
 import { faMobile } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import MenutItem from "../components/ProjectMenu/menuItem";
+import MenutItem from "./ProjectMenu/menuItem";
 
 const Container = styled.main`
     width: 100vw;
