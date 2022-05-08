@@ -1,3 +1,6 @@
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import styled from "@emotion/styled";
 
 import me from '../assets/images/djv_ccexpress.png';
@@ -12,6 +15,15 @@ const Section = styled.section`
         padding-top: 0.3em;
         border-radius: 4px;
         overflow-y: hidden;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+
+        a {
+            padding: 10px;
+        }
     }
 
     .photo {
@@ -52,8 +64,17 @@ const About = () => {
             <Section>
                 <div className="box" id="about">
                     <h1>Daniel Greener-Vigil</h1>
-                    <h4>Software Engineer / </h4>
-                    <h4>Web Developer</h4>
+                    <h4>Software Engineer / Web Developer</h4>
+                    <h4>Mentor</h4>
+                    <div className="social">
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
+                            <FontAwesomeIcon icon={faLinkedin} color="#000"/>
+                        </a>
+                        <a target="_blank" rel="noreferrer" href="https://github.com/greenervigil">
+                            <FontAwesomeIcon icon={faGithub} color="#000"/>
+                        </a>
+                    </div>
+                    
                     {/*<div className="photo">
                         <span></span>
     </div>*/}

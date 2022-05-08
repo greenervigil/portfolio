@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../../GreenerVigil-logos.jpeg';
@@ -164,18 +163,7 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
                 </a>
             </Nav>
-            <Ul>
-                <li>
-                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
-                        <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e"/>
-                    </a>
-                </li>
-                <li>
-                    <a target="_blank" rel="noreferrer" href="https://github.com/greenervigil">
-                        <FontAwesomeIcon icon={faGithub} color="#4d4d4e"/>
-                    </a>
-                </li>
-            </Ul>
+            
         </NavBar>
 
     )
