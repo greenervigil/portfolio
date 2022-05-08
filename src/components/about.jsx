@@ -12,19 +12,23 @@ const StyledDiv = styled.div`
     background-image: url(${background});
     background-size: contain;
     padding: 50px 0;
+    color: #fff;
+    text-shadow: 0 0 10px;
 `;
 
 const Section = styled.section`
-    margin-top: 50px;
+    margin: 50px;
 
     .box {
         height: 70vh;
         width: 50vw;
-        background-color: #18cae6;
+        background-color: #000;
+        border: 1px solid #18cae6;
+        box-shadow: 10px 5px 5px #18cae6;
         margin: 0 auto;
         text-align: center;
         padding-top: 0.3em;
-        border-radius: 4px;
+        border-radius: 10px;
         overflow-y: hidden;
     }
 
@@ -37,45 +41,27 @@ const Section = styled.section`
         }
     }
 
+    .text {
+        padding: 15px;
+    }
+
     .download {
+        background-color: #18cae6;
+        border: 1px solid #18cae6;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .download:hover {
         background-color: #000;
-        border: 1px solid #000;
+        border: 1px solid #18cae6;
         border-radius: 8px;
         text-decoration: none;
         color: #18cae6;
     }
 
-    .download:hover {
-        background-color: #18cae6;
-        border: 1px solid #000;
-        border-radius: 8px;
-        text-decoration: none;
-        color: #000;
-    }
-
-    .photo {
-        width: 12vw;
-        overflow: hidden;
-        whiteSpace: nowrap;
-      }
-      
-      .photo span {
-        width: 40vh;
-        height: 40vh;
-        position: absolute;
-        background-color: #000;
-        background-position: 0% 50%;
-        background-size: 100%;
-        background-repeat: no-repeat;
-        border: 3px solid #18cae6;
-        text-shadow: 0 0 10px #18cae6;
-        border-radius: 50%;
-        overflow: auto;
-        white-space: nowrap;
-      }
-
-    @media only screen and (max-width: 600px) {
-    
+    @media only screen and (max-width: 600px) {    
         .box {
           heigh: 50vh;
           width: 80vw;
@@ -92,15 +78,27 @@ const About = () => {
                     <h1>Daniel Greener-Vigil</h1>
                     <h4>Software Engineer / Web Developer</h4>
                     <h4>Mentor</h4>
+                    <div className="text">
+                        <p>I have a passion for learning and bring that passion to software.  I have been a Software Engineer for 6 years and bring that passion to learn to each project.  I welcome new challenges and help to cultivate that in others. </p>
+                    </div>
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
-                            <FontAwesomeIcon icon={faLinkedin} size="xl" color="#000"/>
+                            <FontAwesomeIcon icon={faLinkedin} size="xl" color="#18cae6"/>
                         </a>
                         <a target="_blank" rel="noreferrer" href="https://github.com/greenervigil">
-                            <FontAwesomeIcon icon={faGithub} size="xl" color="#000"/>
+                            <FontAwesomeIcon icon={faGithub} size="xl" color="#18cae6"/>
                         </a>
                         <a className="download" target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/1gmmq6iEGh4FPSr18xBJsINFKs_HUvfWb9hAYEjUJOgo/">
                             <FontAwesomeIcon icon={faDownload} size={"lg"}/>&nbsp;Download CV/Resume
+                        </a>
+                    </div>
+
+                    <div className="text">
+                        <p>I have spent the last few years developing a mentorship program designed to assist self taught developers through projects designed for the developer with the Agile Lifecycle, version control and project management.</p>
+                    </div>
+                    <div className="social">
+                        <a target="_blank" rel="noreferrer" href="https://github.com/GreenField-Org">
+                            <FontAwesomeIcon icon={faGithub} size="xl" color="#18cae6" />
                         </a>
                     </div>
                 </div>
