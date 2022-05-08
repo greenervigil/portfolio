@@ -1,6 +1,5 @@
 import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 
 const NavBar = styled.div`
@@ -37,21 +36,21 @@ const Mobilebar = () => {
     return (
         <NavBar>
             <Nav>
-                <NavLink exact="true" activeclassname="active" to="/">
+                <a href="/">
                     <FontAwesomeIcon icon={faHome} color="#18cae6" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
+                </a>
+                <a className="about-link" href="#about">
                     <FontAwesomeIcon icon={faUser} color="#18cae6" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="experience-link" to="/experience">
+                </a>
+                <a className="experience-link" href="#experience">
                     <FontAwesomeIcon icon={faFile} color="#18cae6" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="project-link" to="/projects">
+                </a>
+                <a className="project-link" href="#projects">
                     <FontAwesomeIcon icon={faProjectDiagram} color="#18cae6" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
+                </a>
+                <a className="contact-link" href="#contact">
                     <FontAwesomeIcon icon={faEnvelope} color="#18cae6" />
-                </NavLink>
+                </a>
             </Nav>
         </NavBar>
     )

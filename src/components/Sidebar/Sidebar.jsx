@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, NavLink } from "react-router-dom";
 import logo from '../../GreenerVigil-logos.jpeg';
 
 const NavBar = styled.div`
@@ -145,25 +144,25 @@ const Ul = styled.ul`
 const Sidebar = () => {
     return (
         <NavBar>
-            <Link className="logo" to={'/'}>
+            {/*<Link className="logo" to={'/'}>
                 <img src={logo} alt={'logo'}/>
-            </Link>
+            </Link>*/}
             <Nav>
-                <NavLink exact="true" activeclassname="active" to="/">
+                <a href="/">
                     <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="about-link" to="/about">
+                </a>
+                <a className="about-link" href="#about">
                     <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="experience-link" to="/experience">
+                </a>
+                <a className="experience-link" href="#experience">
                     <FontAwesomeIcon icon={faFile} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="project-link" to="/projects">
+                </a>
+                <a className="project-link" href="#projects">
                     <FontAwesomeIcon icon={faProjectDiagram} color="#4d4d4e" />
-                </NavLink>
-                <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
+                </a>
+                <a className="contact-link" href="#contact">
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-                </NavLink>
+                </a>
             </Nav>
             <Ul>
                 <li>
