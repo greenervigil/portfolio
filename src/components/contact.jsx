@@ -12,9 +12,11 @@ const StyledDiv = styled.div`
 `;
 
 const H1 = styled.h1`
-    text-align: center;
-    color: #18cae6;
-    padding-top: 50px;
+  font-family: 'Ubuntu';
+  font-size: 3rem;
+  color: #000;
+  text-shadow: -1px 0 #18cae6, 0 3px #18cae6, 3px 0 #18cae6, 0 -1px #18cae6;
+  text-align: center;
 `;
 
 const Container = styled.div`
