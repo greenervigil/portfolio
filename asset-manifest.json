@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.08baf7ce.css",
-    "main.js": "/static/js/main.359f98e8.js",
+    "main.css": "/static/css/main.678b405c.css",
+    "main.js": "/static/js/main.ce7e68db.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/animation_calculator.png": "/static/media/animation_calculator.6fa6796b6fa5e3f1ff97.png",
+    "static/media/ngl_marketing.png": "/static/media/ngl_marketing.a360419f2defd7cc155c.png",
+    "static/media/express_animations.png": "/static/media/express_animations.5d434f23d96ce6e7c253.png",
+    "static/media/digital_access_services_campaign.png": "/static/media/digital_access_services_campaign.c44e13a5ea299d897d82.png",
     "static/media/yinM3E.jpg": "/static/media/yinM3E.1a5d7121fbf496a214af.jpg",
+    "static/media/big_ideas_campaign.png": "/static/media/big_ideas_campaign.6e4b2d1d418a6bf61ae4.png",
     "static/media/freevector-19-trons.jpg": "/static/media/freevector-19-trons.3e851a901635b1eb06c4.jpg",
     "index.html": "/index.html",
-    "main.08baf7ce.css.map": "/static/css/main.08baf7ce.css.map",
-    "main.359f98e8.js.map": "/static/js/main.359f98e8.js.map",
+    "main.678b405c.css.map": "/static/css/main.678b405c.css.map",
+    "main.ce7e68db.js.map": "/static/js/main.ce7e68db.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.08baf7ce.css",
-    "static/js/main.359f98e8.js"
+    "static/css/main.678b405c.css",
+    "static/js/main.ce7e68db.js"
   ]
 }
