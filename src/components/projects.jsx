@@ -20,7 +20,8 @@ const H1 = styled.h1`
 `;
 
 const Container = styled.div`
-    width:100vw;
+    margin-top: 30px;
+    width:100%;
     height: 100%;
     transform-style: preserve-3d;
     user-select:none;
@@ -69,7 +70,7 @@ const Projects = () => {
 
     useEffect(() => {
         tl.current = gsap.timeline().set('.ring', {
-            rotationY: 180,
+            rotationY: 450,
             cursor: 'grab',
         })
         .set('.img', {
@@ -86,6 +87,22 @@ const Projects = () => {
             stagger: 0.1,
             ease: 'expo'
         })
+        .add(() => {
+            const enter = document.querySelector('.img');
+
+            enter.addEventListener('mouseenter', (e) => {
+                let current = e.currentTarget;
+                console.log('event')
+                gsap.to('.img', {
+                    opacity:    (i,t) => (t===current) ? 1:0.5, 
+                    ease: 'power3'
+                })
+            })
+
+            enter.addEventListener('mouseleave', (e) => {
+                gsap.to('.img', {opacity:1, ease:'power2.inOut'})
+            })
+        }, '-=0.5')
     }, []);
     return (
         <>
