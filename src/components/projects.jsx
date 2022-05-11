@@ -11,16 +11,8 @@ import expressAnimations from '../assets/images/express_animations.png';
 
 gsap.registerPlugin(CSSRulePlugin);
 
-const H1 = styled.h1`
-    font-family: 'Ubuntu';
-    font-size: 3rem;
-    color: #000;
-    text-shadow: -1px 0 #18cae6, 0 3px #18cae6, 3px 0 #18cae6, 0 -1px #18cae6;
-    text-align: center;
-`;
-
 const Container = styled.div`
-    margin-top: 30px;
+    padding-top: 100px;
     width:100%;
     height: 100%;
     transform-style: preserve-3d;
@@ -105,57 +97,53 @@ const Projects = () => {
         }, '-=0.5')
     }, []);
     return (
-        <>
-            <H1>Projects</H1>
-        
-            <Container id="projects">
-                
-                <div className="container">
-                    <div className="ring" ref={tl}>
-                        <div className="img">
-                            <img 
-                                src={animation} 
-                                alt={'Creative Studios animation Calculator tool for their wordpress site'}
-                                width={400}
-                                height={600}
-                            />
-                        </div>
-                        <div className="img">
-                            <img 
-                                src={nglMarketing} 
-                                alt={'National geographic Marketing Site for Secondary Education'}
-                                width={400}
-                                height={600}
-                            />
-                        </div>
-                        <div className="img">
-                            <img 
-                                src={bigIdeas} 
-                                alt={'National geographic Marketing Site Big Ideas Mathematics Campaign'}
-                                width={400}
-                                height={600}
-                            />
-                        </div>
-                        <div className="img">
-                            <img 
-                                src={digitalAccess} 
-                                alt={'National geographic Marketing Site Digital Access Campaign'}
-                                width={400}
-                                height={600}
-                            />
-                        </div>
-                        <div className="img">
-                            <img 
-                                src={expressAnimations} 
-                                alt={'Creative Studios Wordpress Pages for Express Animations'}
-                                width={400}
-                                height={600}
-                            />
-                        </div>
+        <Container id="projects">
+            
+            <div className="container">
+                <div className="ring" ref={tl}>
+                    <div className="img">
+                        <img 
+                            src={animation} 
+                            alt={'Creative Studios animation Calculator tool for their wordpress site'}
+                            width={400}
+                            height={600}
+                        />
+                    </div>
+                    <div className="img">
+                        <img 
+                            src={nglMarketing} 
+                            alt={'National geographic Marketing Site for Secondary Education'}
+                            width={400}
+                            height={600}
+                        />
+                    </div>
+                    <div className="img">
+                        <img 
+                            src={bigIdeas} 
+                            alt={'National geographic Marketing Site Big Ideas Mathematics Campaign'}
+                            width={400}
+                            height={600}
+                        />
+                    </div>
+                    <div className="img">
+                        <img 
+                            src={digitalAccess} 
+                            alt={'National geographic Marketing Site Digital Access Campaign'}
+                            width={400}
+                            height={600}
+                        />
+                    </div>
+                    <div className="img">
+                        <img 
+                            src={expressAnimations} 
+                            alt={'Creative Studios Wordpress Pages for Express Animations'}
+                            width={400}
+                            height={600}
+                        />
                     </div>
                 </div>
-            </Container>
-        </>
+            </div>
+        </Container>
     );
 }
 

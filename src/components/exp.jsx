@@ -19,10 +19,7 @@ const Timeline = styled.main`
 
 const Exp = () => {
     return (
-        <Timeline>
-            <div id="experience">
-                <h1>Experience</h1>
-            </div>
+        <Timeline id="experience">
             <div className="progressbars">
                 <ProgressBar title={'HTML'} percentage={90}/>
                 <ProgressBar title={'CSS'} percentage={80}/>
