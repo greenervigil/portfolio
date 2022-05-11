@@ -20,7 +20,7 @@ const Section = styled.section`
     margin: 50px;
 
     .box {
-        height: 70vh;
+        height: 75vh;
         width: 50vw;
         background-color: #000;
         border: 1px solid #18cae6;
@@ -63,9 +63,8 @@ const Section = styled.section`
 
     @media only screen and (max-width: 600px) {    
         .box {
-          heigh: 50vh;
+          height: 90vh;
           width: 80vw;
-          margin-top: 30%;
         }
       }
 `;
@@ -79,7 +78,7 @@ const About = () => {
                     <h4>Software Engineer / Web Developer</h4>
                     <h4>Mentor</h4>
                     <div className="text">
-                        <p>I have a passion for learning and bring that passion to software.  I have been a Software Engineer for 6 years and bring that passion to learn to each project.  I welcome new challenges and help to cultivate that in others. </p>
+                        <p>I have a passion for learning and bring that passion to software.  I have been a Software Engineer for 6 years and bring my passion to learn to each project.  I am always willing to learn something new and never shy away from the unknown.  I welcome new challenges and help cultivate those abilities in others. </p>
                     </div>
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
@@ -94,7 +93,7 @@ const About = () => {
                     </div>
 
                     <div className="text">
-                        <p>I have spent the last few years developing a mentorship program designed to assist self taught developers through projects designed for the developer with the Agile Lifecycle, version control and project management.</p>
+                        <p>I have spent the last few years developing a mentorship program to assist self taught developers through projects designed for the developer with the Agile Methodology, version control practices and standard project management.</p>
                     </div>
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://github.com/GreenField-Org">

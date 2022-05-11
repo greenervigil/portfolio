@@ -14,7 +14,7 @@ const App = () => {
     <>
       {width > '600' ? <Sidebar /> : <Mobilebar />}
       
-      <Home />
+      {width > '600' && <Home /> }
       <About />
       <Exp />
       <Projects />
