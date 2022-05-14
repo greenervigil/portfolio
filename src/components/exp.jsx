@@ -21,7 +21,7 @@ const Exp = () => {
     return (
         <Timeline id="experience">
             <div className="progressbars">
-                <ProgressBar title={'HTML'} percentage={90}/>
+                <ProgressBar icon={'HTML'} percentage={90}/>
                 <ProgressBar title={'CSS'} percentage={80}/>
                 <ProgressBar title={'JS'} percentage={90}/>
                 <ProgressBar title={'TS'} percentage={70}/>
@@ -29,6 +29,7 @@ const Exp = () => {
             <div className="progressbars">
                 <ProgressBar title={'React'} percentage={90}/>
                 <ProgressBar title={'NextJS'} percentage={50}/>
+                <ProgressBar title={'SB'} percentage={70}/>
                 <ProgressBar title={'WP'} percentage={40}/>
             </div>
             <div className="progressbars">
