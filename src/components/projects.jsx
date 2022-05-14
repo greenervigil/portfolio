@@ -8,36 +8,36 @@ import expressAnimations from '../assets/images/express_animations.png';
 
 
 const Container = styled.ul`
-    overflow:hidden;
-    width:90%;
-    margin:0 auto; 
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto; 
 
     .clear:after {
-        content:"";
-        display:block;
-        clear:both;
+        content: "";
+        display: block;
+        clear: both;
     }
 
     li {
-        position:relative;
-        list-style-type:none;
-        width:27.85714285714286%; /* = (100-2.5) / 3.5 */
+        position: relative;
+        list-style-type: none;
+        width: 27.85714285714286%; /* = (100-2.5) / 3.5 */
         padding-bottom: 32.16760145166612%; /* =  width /0.866 */
-        float:left;
-        overflow:hidden;
-        visibility:hidden;
+        float: left;
+        overflow: hidden;
+        visibility: hidden;
         
         -webkit-transform: rotate(-60deg) skewY(30deg);
         -ms-transform: rotate(-60deg) skewY(30deg);
         transform: rotate(-60deg) skewY(30deg);
     }
 
-    li:nth-child(3n+2){
-        margin:0 1%;
+    li:nth-child(3n+2) {
+        margin: 0 1%;
     }
 
-    li:nth-child(6n+4){
-        margin-left:0.5%;
+    li:nth-child(6n+4) {
+        margin-left: 0.5%;
     }
 
     li:nth-child(6n+4), li:nth-child(6n+5), li:nth-child(6n+6) {
@@ -50,40 +50,41 @@ const Container = styled.ul`
     }
 
     li:nth-child(6n+4):last-child, li:nth-child(6n+5):last-child, li:nth-child(6n+6):last-child {
-        margin-bottom:0%;
+        margin-bottom: 0%;
     }
 
     li * {
-        position:absolute;
-        visibility:visible;
+        position: absolute;
+        visibility: visible;
     }
 
     li > div {
-        width:100%;
-        height:100%;
-        text-align:center;
-        color:#fff;
-        overflow:hidden;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
         
         -webkit-transform: skewY(-30deg) rotate(60deg);
         -ms-transform: skewY(-30deg) rotate(60deg);
         transform: skewY(-30deg) rotate(60deg);
         
-        -webkit-backface-visibility:hidden;
+        -webkit-backface-visibility: hidden;
         
     }
 
     li img {
-        left:-100%; right:-100%;
-        width: auto; height:100%;
-        margin:0 auto;   
+        left: -100%; 
+        right: -100%;
+        width: auto; 
+        height: 100%;
+        margin: 0 auto;   
     }
 
     div h1, div p {
-        width:90%;
-        padding:0 5%;
-        background-color:#18cae6;
-        font-family: 'Raleway', sans-serif;
+        width: 90%;
+        padding: 0 5%;
+        background-color: #18cae6;
         
         -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
         -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
@@ -91,39 +92,40 @@ const Container = styled.ul`
     }
 
     li h1 {
-        bottom:110%;
-        font-style:italic;
-        font-weight:normal;
-        font-size:1.5em;
-        padding-top:100%;
-        padding-bottom:100%;
+        bottom: 110%;
+        font-style: italic;
+        font-weight: normal;
+        font-size: 1.5em;
+        padding-top: 100%;
+        padding-bottom: 100%;
     }
 
     li h1:after {
-        content:'';
-        display:block;
-        position:absolute;
-        bottom:-1px; left:45%;
-        width:10%;
-        text-align:center;
-        z-index:1;
-        border-bottom:2px solid #fff;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -1px; 
+        left: 45%;
+        width: 10%;
+        text-align: center;
+        z-index: 1;
+        border-bottom: 2px solid #fff;
     }
 
     li p {
-        padding-top:50%;
-        top:110%;
-        padding-bottom:50%;
+        padding-top: 50%;
+        top: 110%;
+        padding-bottom: 50%;
     }
 
     li div:hover h1 {
-        bottom:50%;
-        padding-bottom:10%;
+        bottom: 50%;
+        padding-bottom: 10%;
     }
 
-    li div:hover p{
-        top:50%;
-        padding-top:10%;
+    li div:hover p {
+        top: 50%;
+        padding-top: 10%;
     }
 `;
 
@@ -159,6 +161,8 @@ const Projects = () => {
                     <p>6 Page Digital Access Campaign for National Geographic Learning Secondary Education</p>
                 </div>
             </li>
+            <li className="pusher"></li>
+            <li className="pusher"></li>
             <li>
                 <div>
                     <img src={expressAnimations} alt="Creative Studios Wordpress site" />
