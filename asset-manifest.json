@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.678b405c.css",
-    "main.js": "/static/js/main.a50ef922.js",
+    "main.js": "/static/js/main.87063aa1.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/animation_calculator.png": "/static/media/animation_calculator.6fa6796b6fa5e3f1ff97.png",
     "static/media/ngl_marketing.png": "/static/media/ngl_marketing.a360419f2defd7cc155c.png",
@@ -10,13 +10,14 @@
     "static/media/yinM3E.jpg": "/static/media/yinM3E.1a5d7121fbf496a214af.jpg",
     "static/media/big_ideas_campaign.png": "/static/media/big_ideas_campaign.6e4b2d1d418a6bf61ae4.png",
     "static/media/freevector-19-trons.jpg": "/static/media/freevector-19-trons.3e851a901635b1eb06c4.jpg",
+    "static/media/gals_best_pal.png": "/static/media/gals_best_pal.321055a9dca7a99b89a1.png",
     "index.html": "/index.html",
     "main.678b405c.css.map": "/static/css/main.678b405c.css.map",
-    "main.a50ef922.js.map": "/static/js/main.a50ef922.js.map",
+    "main.87063aa1.js.map": "/static/js/main.87063aa1.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.678b405c.css",
-    "static/js/main.a50ef922.js"
+    "static/js/main.87063aa1.js"
   ]
 }
