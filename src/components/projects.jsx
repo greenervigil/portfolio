@@ -83,9 +83,9 @@ const Container = styled.ul`
     }
 
     div h1, div p {
-        width:90%;
-        padding:0 5%;
-        background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
+        width: 90%;
+        padding: 0 5%;
+        background-color:#008080; 
         font-family: 'Raleway', sans-serif;
         
         -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
@@ -107,8 +107,8 @@ const Container = styled.ul`
         display: block;
         position: absolute;
         bottom: -1px; 
-        left: 45%;
-        width: 10%;
+        left: 40%;
+        width: 20%;
         text-align: center;
         z-index: 1;
         border-bottom: 2px solid #fff;
@@ -121,45 +121,45 @@ const Container = styled.ul`
     }
 
     li div:hover h1 {
-        bottom: 50%;
+        bottom: 45%;
         padding-bottom: 10%;
     }
 
     li div:hover p {
-        top: 50%;
+        top: 45%;
         padding-top: 10%;
     }
 `;
 
 const Projects = () => {
     return (
-        <Container className='clear'>
+        <Container className='clear' id="projects">
             <li className='pusher'></li>
             <li>
                 <div>
                     <img src={animation} alt="Creative Studios animation calculator tool wordpress page" />
-                    <h1>Creative Studios - Cengage Group</h1>
+                    <h1>Cengage Group - Creative Studios </h1>
                     <p>Animation Calculator Tool Wordpress page</p>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={nglMarketing} alt="National Geographic Learning Marketing site for Secondary Education" />
-                    <h1>NGL Marketing - Cengage Group</h1>
+                    <h1>Cengage Group - National Geographic Learning (Marketing)</h1>
                     <p>National Geographic Learning Marketing site for Secondary education.</p>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={bigIdeas} alt="Big Ideas Mathematics Marketing campaign for National Geographic Learning" />
-                    <h1>NGL Big Ideas Mathematics - Cengage Group</h1>
+                    <h1>Cengage Group - NGL Big Ideas Mathematics</h1>
                     <p>Big Ideas 7 page Marketing Campaign</p>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={digitalAccess} alt="National Geographic Learning Digital Access Campaign for secondary education" />
-                    <h1>NGL Digital Access - Cengage Group</h1>
+                    <h1>Cengage Group - NGL Digital Access</h1>
                     <p>6 Page Digital Access Campaign for National Geographic Learning Secondary Education</p>
                 </div>
             </li>
@@ -168,15 +168,15 @@ const Projects = () => {
             <li>
                 <div>
                     <img src={expressAnimations} alt="Creative Studios Wordpress site" />
-                    <h1>Creative Studios - Cengage Group</h1>
-                    <p>Additional pages to Creative Studios wordpress site.</p>
+                    <h1>Cengage Group - Creative Studios</h1>
+                    <p>Pages to Creative Studios wordpress site.</p>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={galsBestPals} alt="Creative Studios Wordpress site" />
-                    <h1>Gals Best Pal - Non Profit Dog Adoptions</h1>
-                    <p>Site Creation for Dog Adoption group.</p>
+                    <h1>Gals Best Pal - Non Profit Dog Rescue</h1>
+                    <p>Site for Dog Foster / Adoption group.</p>
                 </div>
             </li>
         </Container>
