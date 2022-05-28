@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 import ProgressBar from "./progressBar";
 
 const Timeline = styled.main`
-    padding-top: 125px;
     width: 100vw;
 
     h1 {

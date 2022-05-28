@@ -5,6 +5,7 @@ import nglMarketing from '../assets/images/ngl_marketing.png';
 import bigIdeas from '../assets/images/big_ideas_campaign.png';
 import digitalAccess from '../assets/images/digital_access_services_campaign.png';
 import expressAnimations from '../assets/images/express_animations.png';
+import galsBestPals from '../assets/images/gals_best_pal.png'
 
 
 const Container = styled.ul`
@@ -82,9 +83,10 @@ const Container = styled.ul`
     }
 
     div h1, div p {
-        width: 90%;
-        padding: 0 5%;
-        background-color: #18cae6;
+        width:90%;
+        padding:0 5%;
+        background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
+        font-family: 'Raleway', sans-serif;
         
         -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
         -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
@@ -168,6 +170,13 @@ const Projects = () => {
                     <img src={expressAnimations} alt="Creative Studios Wordpress site" />
                     <h1>Creative Studios - Cengage Group</h1>
                     <p>Additional pages to Creative Studios wordpress site.</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src={galsBestPals} alt="Creative Studios Wordpress site" />
+                    <h1>Gals Best Pal - Non Profit Dog Adoptions</h1>
+                    <p>Site Creation for Dog Adoption group.</p>
                 </div>
             </li>
         </Container>
