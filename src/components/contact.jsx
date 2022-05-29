@@ -181,7 +181,7 @@ const Contact = () => {
                 <div className="envelope" ref={tl} onClick={openCard}></div>
                 <div className="letter">
                 <div className="body">
-                    <form action="https://formsubmit.co/daniel.julian.vigil@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/a3e41e802167824b816157ab86b16ea2" method="POST">
                       <label htmlFor='name'>Name&nbsp;</label>
                       <input type="text" name="name" id="name" required />
                       <label htmlFor='email'>Email&nbsp;</label>
