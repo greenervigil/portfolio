@@ -30,7 +30,8 @@ const App = () => {
       <Exp />
       <H1>Projects</H1>
       <Projects />
-      {/*<Contact />*/}
+      <H1>Contact</H1>
+      <Contact />
     </>
   );
 }

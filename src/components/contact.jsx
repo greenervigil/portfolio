@@ -8,22 +8,15 @@ import background from '../assets/images/yinM3E.jpg'
 gsap.registerPlugin(CSSRulePlugin);
 
 const StyledDiv = styled.div`
-  backgroud-image: url(${background});
-`;
-
-const H1 = styled.h1`
-  font-family: 'Ubuntu';
-  font-size: 3rem;
-  color: #000;
-  text-shadow: -1px 0 #18cae6, 0 3px #18cae6, 3px 0 #18cae6, 0 -1px #18cae6;
-  text-align: center;
+  
 `;
 
 const Container = styled.div`
-    min-height: 75vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    backgroud-image: url(${background});
 
     .content {
         position: relative;
@@ -58,6 +51,10 @@ const Container = styled.div`
           
           .close {
             position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             right: 0;
             font-size: 30px;
             cursor: pointer;
@@ -179,23 +176,26 @@ const Contact = () => {
 
     return (
         <StyledDiv id="contact">
-            <H1>Contact</H1>
             <Container>
             <div className="content" >
                 <div className="envelope" ref={tl} onClick={openCard}></div>
                 <div className="letter">
                 <div className="body">
-                    <form>
-                        <label>Name</label>
-                        <input type={'text'}/>
-                        <br/>
-                        <label>Email</label>
-                        <input type={'email'}/>
-                        <br/>
-                        <label>Brief description of project</label>
-                        <textarea cols={30}/>
-                        <br/>
-                        <span className='close' onClick={closeCard}>Submit</span>
+                    <form action="https://formsubmit.co/daniel.julian.vigil@gmail.com" method="POST">
+                      <label htmlFor='name'>Name&nbsp;</label>
+                      <input type="text" name="name" id="name" required />
+                      <label htmlFor='email'>Email&nbsp;</label>
+                      <input type="email" name="email" id='email' required />
+                      
+                      <label htmlFor='message'>Message</label>
+                      <textarea name="message" id='message' placeholder="Details of your problem"></textarea>
+
+                      <input type="hidden" name="_subject" value="New Contact Request!"></input>
+                      <input type="text" name="_honey" style={{ display: 'none' }} />
+                      <input type="hidden" name="_template" value="box"></input>
+                      
+                      <button type="submit">Send</button>
+                      {/*<span className='close' onClick={closeCard}>Submit</span>*/}
                     </form>
                 </div>
                 </div>
