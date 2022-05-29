@@ -188,7 +188,7 @@ const Contact = () => {
                       <input type="email" name="email" id='email' required />
                       
                       <label htmlFor='message'>Message</label>
-                      <textarea name="message" id='message' placeholder="Details of your problem"></textarea>
+                      <textarea name="message" id='message' placeholder="Send me your details"></textarea>
 
                       <input type="hidden" name="_subject" value="New Contact Request!"></input>
                       <input type="text" name="_honey" style={{ display: 'none' }} />
