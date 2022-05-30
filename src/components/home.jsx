@@ -26,7 +26,11 @@ const Section = styled.section`
     text-shadow: -1px 0 #18cae6, 0 3px #18cae6, 3px 0 #18cae6, 0 -1px #18cae6;
   }
 
-  
+  @media screen and (max-width: 900px) and (min-width: 600px) {
+    ul {
+      display: none;
+    }
+  }
 
   @media only screen and (max-width: 600px) {
     ul {

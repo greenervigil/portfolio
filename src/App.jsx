@@ -22,9 +22,9 @@ const App = () => {
   const width = window.innerWidth;
   return (
     <>
-      {width > '600' ? <Sidebar /> : <Mobilebar />}
+      {width > '900' ? <Sidebar /> : <Mobilebar />}
       
-      {width > '600' && <Home /> }
+      {width > '900' && <Home /> }
       <About />
       <H1>Experience</H1>
       <Exp />

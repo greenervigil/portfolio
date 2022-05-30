@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 
 const NavBar = styled.div`
     background: #181818;
-    width: 100%;
+    width: 100vw;
     height: 50px;
     position: fixed;
     bottom: 0;
@@ -16,7 +16,7 @@ const Nav = styled.nav`
     display: flex;
     justify-content: space-evenly;
     height: 210px;
-    width: 100%;
+    width: 100vh;
 
     a {
         font-size: 22px;
