@@ -37,10 +37,10 @@ const Container = styled.div`
         top: 10px;
         left: 10px;
         width: 280px;
-        height: 160px;
+        height: 165px;
         z-index: 15;
         border-radius: 2px;
-        background: #18cae6;
+        background: #000;
         box-shadow: 0px 1px 7px -2px #18cae6;
       
         .body {
@@ -65,12 +65,36 @@ const Container = styled.div`
            } 
 
            form {
-               padding: 10px;
+              background-color: #000;
+              color: #fff;
+              text-shadow: 0 0 10px;
+              padding: 10px;
            }
 
            label: {
                 margin-right: 5px;
             }
+           input {
+             width: 60%;
+             margin: 5px;
+           }
+
+           button {
+            background-color: #18cae6;
+            border: 1px solid #18cae6;
+            border-radius: 10px;
+            text-decoration: none;
+            text-shadow: 0 0 10px;
+            color: #000;
+          }
+    
+           button:hover {
+            background-color: #000;
+            border: 1px solid #18cae6;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #18cae6;
+          }
         }
       }
       
