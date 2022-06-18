@@ -19,21 +19,6 @@ const StyledDiv = styled.div`
 const Section = styled.section`
     margin: 50px;
 
-    .box {
-        min-height: 550px;
-        width: 50vw;
-        background-color: #000;
-        color: #fff;
-        border: 1px solid #18cae6;
-        box-shadow: 10px 5px 5px #18cae6;
-        margin: 0 auto;
-        text-align: center;
-        text-shadow: 0 0 10px;
-        padding-top: 0.3em;
-        border-radius: 10px;
-        overflow-y: hidden;
-    }
-
     .social {
         display: flex;
         justify-content: center;
@@ -42,13 +27,6 @@ const Section = styled.section`
             padding: 10px;
         }
     }
-
-    @media only screen and (max-width: 600px) {    
-        .box {
-          height: 90vh;
-          width: 80vw;
-        }
-      }
 `;
 
 const content = {

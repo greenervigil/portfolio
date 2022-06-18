@@ -13,6 +13,11 @@ const Div = styled.div`
     padding-top: 0.3em;
     border-radius: 10px;
     overflow-y: hidden;
+
+    @media only screen and (max-width: 600px) {    
+        height: 700px;
+        width: 80vw;
+    }
 `;
 
 const Box = ({ children }) => {
