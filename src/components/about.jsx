@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import background from '../assets/images/yinM3E.jpg';
 import Container from "./container/container";
 import Button from "./button/button";
-
+import Box from "./box/box";
 
 const StyledDiv = styled.div`
     width: 100vw;
@@ -51,18 +51,22 @@ const Section = styled.section`
       }
 `;
 
+const content = {
+    name: 'Daniel Greener-Vigil',
+    title: `Software Engineer / Web Developer <br/>Mentor`,
+    aboutText: 'I have a passion for learning and bring that passion to software.  I have been a Software Engineer for 6 years and bring my passion to learn to each project.  I am always willing to learn something new and never shy away from the unknown.  I welcome new challenges and help cultivate those abilities in others.',
+    greenfield: 'I have spent the last few years developing a mentorship program to assist self taught developers through projects designed for the developer with the Agile Methodology, version control practices and standard project management.'
+}
+
 const About = () => {
     return (
         <StyledDiv>
             <Section>
-                <div className="box" id="about">
-                    <h1>Daniel Greener-Vigil</h1>
-                    <h4>
-                        Software Engineer / Web Developer <br/>
-                        Mentor
-                    </h4>
+                <Box id="about">
+                    <h1>{content.name}</h1>
+                    <h4 dangerouslySetInnerHTML={{ __html: content.title }}></h4>
 
-                    <Container text={'I have a passion for learning and bring that passion to software.  I have been a Software Engineer for 6 years and bring my passion to learn to each project.  I am always willing to learn something new and never shy away from the unknown.  I welcome new challenges and help cultivate those abilities in others.'}/>
+                    <Container text={content.aboutText}/>
 
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
@@ -78,14 +82,14 @@ const About = () => {
                         </a>
                     </div>
 
-                    <Container text={'I have spent the last few years developing a mentorship program to assist self taught developers through projects designed for the developer with the Agile Methodology, version control practices and standard project management.'} />
+                    <Container text={content.greenfield} />
 
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://github.com/GreenField-Org">
                             <FontAwesomeIcon icon={faGithub} size="xl" color="#18cae6" />
                         </a>
                     </div>
-                </div>
+                </Box>
             </Section>
         </StyledDiv>
     );
