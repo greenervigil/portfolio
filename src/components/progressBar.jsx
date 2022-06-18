@@ -9,6 +9,7 @@ const Progress = styled.div`
 
     .circularProgressbar-text {
         box-shadow: 0 0 10px;
+        transition: 3s ease;
     }
 
 `;
