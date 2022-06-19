@@ -1,6 +1,7 @@
 import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "@emotion/styled";
+import { FC } from "react";
 
 const NavBar = styled.div`
     background: #181818;
@@ -31,7 +32,7 @@ const Nav = styled.nav`
         }
 `;
 
-const Mobilebar = () => {
+const Mobilebar: FC = () => {
     return (
         <NavBar>
             <Nav>
