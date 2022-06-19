@@ -8,6 +8,7 @@ import background from '../assets/images/yinM3E.jpg';
 import Container from "./container/container";
 import Button from "./button/button";
 import Card from "./card/card";
+import { FC } from "react";
 
 const StyledDiv = styled.div`
     width: 100vw;
@@ -36,7 +37,7 @@ const content = {
     greenfield: 'I have spent the last few years developing a mentorship program to assist self taught developers through projects designed for the developer with the Agile Methodology, version control practices and standard project management.'
 }
 
-const About = () => {
+const About: FC = () => {
     return (
         <StyledDiv id="about">
             <Section>
@@ -48,10 +49,10 @@ const About = () => {
 
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
-                            <FontAwesomeIcon icon={faLinkedin} size="xl" color="#18cae6"/>
+                            <FontAwesomeIcon icon={faLinkedin} size={'lg'} color="#18cae6"/>
                         </a>
                         <a target="_blank" rel="noreferrer" href="https://github.com/greenervigil">
-                            <FontAwesomeIcon icon={faGithub} size="xl" color="#18cae6"/>
+                            <FontAwesomeIcon icon={faGithub} size={'lg'} color="#18cae6"/>
                         </a>
                         <a target="_blank" rel="noreferrer" href="https://docs.google.com/document/d/1gmmq6iEGh4FPSr18xBJsINFKs_HUvfWb9hAYEjUJOgo/">
                             <Button icon={<FontAwesomeIcon icon={faDownload} size={"lg"}/>} 
@@ -64,7 +65,7 @@ const About = () => {
 
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://github.com/GreenField-Org">
-                            <FontAwesomeIcon icon={faGithub} size="xl" color="#18cae6" />
+                            <FontAwesomeIcon icon={faGithub} size={'lg'} color="#18cae6" />
                         </a>
                     </div>
                 </Card>
