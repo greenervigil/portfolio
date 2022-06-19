@@ -1,3 +1,4 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
 import ProgressBar from './progressBar';
@@ -5,9 +6,9 @@ import ProgressBar from './progressBar';
 export default {
   title: 'Component/Progress Bar',
   component: ProgressBar,
-};
+} as ComponentMeta<typeof ProgressBar>;
 
-const Template = (args) => <ProgressBar {...args} />;
+const Template: ComponentStory<typeof ProgressBar> = (args) => <ProgressBar {...args} />;
 
 export const Primary = Template.bind({});
 

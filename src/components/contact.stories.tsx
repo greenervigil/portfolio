@@ -1,3 +1,4 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
 import Contact from './contact';
@@ -5,8 +6,8 @@ import Contact from './contact';
 export default {
   title: 'Section/Contact',
   component: Contact,
-};
+} as ComponentMeta<typeof Contact>;
 
-const Template = (args) => <Contact {...args} />;
+const Template: ComponentStory<typeof Contact> = () => <Contact />;
 
 export const Primary = Template.bind({});

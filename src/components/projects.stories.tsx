@@ -1,3 +1,4 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
 import Projects from './projects';
@@ -5,8 +6,8 @@ import Projects from './projects';
 export default {
   title: 'Section/Project',
   component: Projects,
-};
+} as ComponentMeta<typeof Projects>;
 
-const Template = (args) => <Projects {...args} />;
+const Template: ComponentStory<typeof Projects> = () => <Projects />;
 
 export const Primary = Template.bind({});

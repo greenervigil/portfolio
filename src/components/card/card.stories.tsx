@@ -1,3 +1,4 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
 
 import Card from './card';
@@ -5,9 +6,9 @@ import Card from './card';
 export default {
   title: 'component/Card',
   component: Card,
-};
+} as ComponentMeta<typeof Card>;
 
-const Template = (args) => <Card {...args} />;
+const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />;
 
 export const Primary = Template.bind({});
 

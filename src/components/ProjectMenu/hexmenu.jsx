@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MenutItem from "./ProjectMenu/menuItem";
+import MenutItem from "./menuItem";
 import { faBootstrap, faHtml5, faJs, faReact, faWordpress } from "@fortawesome/free-brands-svg-icons";
 import { faMobile } from "@fortawesome/free-solid-svg-icons";
 
