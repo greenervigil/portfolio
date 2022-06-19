@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { faEnvelope, faFile, faHome, faProjectDiagram, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FC } from "react";
 
 const NavBar = styled.div`
     background: #181818;
@@ -100,7 +101,7 @@ const Nav = styled.nav`
     }
 `;
 
-const Sidebar = () => {
+const Sidebar: FC = () => {
     return (
         <NavBar>
             <Nav>
