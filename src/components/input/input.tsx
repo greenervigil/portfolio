@@ -6,12 +6,13 @@ const StyledLabel = styled.label`
 `;
 
 const StyledInput = styled.input`
-    width: 70%;
-    margin: 5px;
+    width: 60%;
     border: 1px solid rgba( 255, 255, 255, 0.18);
 `;
 
 const Div = styled.div`
+    display: flex;
+    justify-content: space-between;
     margin: 5px;
 `;
 
@@ -26,8 +27,8 @@ interface InputProps {
 const Input: FC<InputProps> = ({ type, name, id, required = true, label}) => {
     return (
         <Div>
-            <label htmlFor={id}>{label}&nbsp;</label>
-            <input type={type} name={name} id={id} required={required} />
+            <StyledLabel htmlFor={id}>{label}&nbsp;</StyledLabel>
+            <StyledInput type={type} name={name} id={id} required={required} />
         </Div>
     )
 }

@@ -70,6 +70,7 @@ const StyledDiv = styled.div`
               padding: 10px;
               height: 90%;
               box-shadow: 0px 1px 7px -2px #18cae6;
+              backdrop-filter: blur( 5px );
               -webkit-backdrop-filter: blur( 5px );
               border-radius: 10px;
               border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -134,11 +135,11 @@ const Contact = () => {
         t2.current.play();
     }
     
-    function closeCard(e) {
+    /*function closeCard(e) {
         e.stopPropagation();
         tl.current.reverse();
         t2.current.reverse();
-    }
+    }*/
 
     useEffect(() => {
         tl.current = gsap.timeline({paused: true});

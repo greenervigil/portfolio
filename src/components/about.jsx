@@ -38,9 +38,9 @@ const content = {
 
 const About = () => {
     return (
-        <StyledDiv>
+        <StyledDiv id="about">
             <Section>
-                <Card id="about">
+                <Card>
                     <h1>{content.name}</h1>
                     <h4 dangerouslySetInnerHTML={{ __html: content.title }}></h4>
 
