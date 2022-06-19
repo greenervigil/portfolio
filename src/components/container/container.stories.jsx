@@ -3,7 +3,7 @@ import React from 'react';
 import Container from './container';
 
 export default {
-  title: 'Container',
+  title: 'Component/Container',
   component: Container,
 };
 

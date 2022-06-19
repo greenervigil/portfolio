@@ -3,7 +3,7 @@ import React from 'react';
 import Box from './box';
 
 export default {
-  title: 'Box',
+  title: 'component/Box',
   component: Box,
 };
 

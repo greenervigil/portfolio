@@ -3,7 +3,7 @@ import React from 'react';
 import Projects from './projects';
 
 export default {
-  title: 'Project section',
+  title: 'Section/Project',
   component: Projects,
 };
 
