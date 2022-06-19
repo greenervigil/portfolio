@@ -4,19 +4,19 @@ import styled from "@emotion/styled";
 
 const NavBar = styled.div`
     background: #181818;
-    width: 100vw;
+    width: 100%;
     height: 50px;
     position: fixed;
     bottom: 0;
     z-index: 999;
     border-top: 1px solid #18cae6;
+    box-shadow: 0 0 15px #18cae6;
 `;
 
 const Nav = styled.nav`
     display: flex;
     justify-content: space-evenly;
     height: 210px;
-    width: 100vh;
 
     a {
         font-size: 22px;
