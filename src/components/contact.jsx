@@ -4,7 +4,6 @@ import { CSSRulePlugin } from 'gsap-trial/CSSRulePlugin';
 
 import styled from "@emotion/styled";
 import Button from '../components/button/button';
-import background from '../assets/images/yinM3E.jpg';
 import Input from './input/input';
 
 gsap.registerPlugin(CSSRulePlugin);
@@ -14,7 +13,6 @@ const StyledDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    backgroud-image: url(${background});
 
     .content {
         position: relative;
