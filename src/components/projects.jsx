@@ -126,7 +126,7 @@ const Container = styled.ul`
     }
 
     li div:hover p {
-        top: 45%;
+        top: 40%;
         padding-top: 10%;
     }
 `;
@@ -145,22 +145,22 @@ const Projects = () => {
             <li>
                 <div>
                     <img src={nglMarketing} alt="National Geographic Learning Marketing site for Secondary Education" />
-                    <h1>Cengage Group - National Geographic Learning (Marketing)</h1>
-                    <p>National Geographic Learning Marketing site for Secondary education.</p>
+                    <h1>NGL Secondary Marketing</h1>
+                    <p>National Geographic Learning Marketing site for Secondary education through Cengage Group.</p>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={bigIdeas} alt="Big Ideas Mathematics Marketing campaign for National Geographic Learning" />
-                    <h1>Cengage Group - NGL Big Ideas Mathematics</h1>
-                    <p>Big Ideas 7 page Marketing Campaign</p>
+                    <h1>NGL Big Ideas Mathematics</h1>
+                    <p>Big Ideas 7 page Marketing Campaign through Cengage Group.</p>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={digitalAccess} alt="National Geographic Learning Digital Access Campaign for secondary education" />
-                    <h1>Cengage Group - NGL Digital Access</h1>
-                    <p>6 Page Digital Access Campaign for National Geographic Learning Secondary Education</p>
+                    <h1>NGL Digital Access</h1>
+                    <p>6 Page Digital Access Campaign for National Geographic Learning Secondary Education through Cengage Group.</p>
                 </div>
             </li>
             <li className="pusher"></li>
