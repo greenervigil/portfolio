@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { FC, ReactNode } from 'react';
 
 const Div = styled.div`
     min-height: 550px;
@@ -16,17 +17,17 @@ const Div = styled.div`
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
-
-
-
-
     @media only screen and (max-width: 600px) {    
         height: 700px;
         width: 80vw;
     }
 `;
 
-const Card = ({ children }) => {
+interface CardProps {
+    children: ReactNode;
+}
+
+const Card: FC<CardProps> = ({ children }) => {
     return(
         <Div>{children}</Div>
     )
