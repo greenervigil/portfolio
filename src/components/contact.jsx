@@ -5,6 +5,7 @@ import { CSSRulePlugin } from 'gsap-trial/CSSRulePlugin';
 import styled from "@emotion/styled";
 import Button from '../components/button/button';
 import background from '../assets/images/yinM3E.jpg';
+import Input from './input/input';
 
 gsap.registerPlugin(CSSRulePlugin);
 
@@ -74,14 +75,6 @@ const StyledDiv = styled.div`
               border: 1px solid rgba( 255, 255, 255, 0.18 );
            }
 
-           label: {
-                margin-right: 5px;
-            }
-           input {
-             width: 70%;
-             margin: 5px;
-             border: 1px solid rgba( 255, 255, 255, 0.18);
-           }
            textarea {
             width: 75%;
            }
@@ -195,14 +188,9 @@ const Contact = () => {
             <div className="letter">
               <div className="body">
                 <form action="https://formsubmit.co/a3e41e802167824b816157ab86b16ea2" method="POST">
-                  <div>
-                    <label htmlFor='name'>Name&nbsp;</label>
-                    <input type="text" name="name" id="name" required />
-                  </div>
-                  <div>
-                    <label htmlFor='email'>Email&nbsp;</label>
-                    <input type="email" name="email" id='email' required />
-                  </div>
+                  <Input type="text" name="name" id="name" label="Name" />
+                  
+                  <Input type="email" name="email" id="email" label="Email" />
                   
                   <label htmlFor='message'>Message</label>
                   <textarea name="message" id='message' placeholder="Send me your details"></textarea>
