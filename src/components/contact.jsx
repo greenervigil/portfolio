@@ -52,8 +52,9 @@ const StyledDiv = styled.div`
             justify-content: center;
             align-items: center;
             right: 0;
-            font-size: 30px;
+            font-size: 20px;
             cursor: pointer;
+            margin-right: 5px;
             -webkit-user-select: none;  
             -moz-user-select: none;    
             -ms-user-select: none;      
@@ -135,11 +136,11 @@ const Contact = () => {
         t2.current.play();
     }
     
-    /*function closeCard(e) {
-        e.stopPropagation();
+    function closeCard(e) {
+        //e.stopPropagation();
         tl.current.reverse();
         t2.current.reverse();
-    }*/
+    }
 
     useEffect(() => {
         tl.current = gsap.timeline({paused: true});
@@ -201,7 +202,7 @@ const Contact = () => {
                   <input type="hidden" name="_template" value="box"></input>
                   
                   <Button type="submit" label="Submit" />
-                  {/*<span className='close' onClick={closeCard}>Submit</span>*/}
+                  <span className='close' onClick={closeCard}>X</span>
                 </form>
               </div>
             </div>
