@@ -5,12 +5,12 @@ const StyledButton = styled.button`
     border: 1px solid #18cae6;
     border-radius: 10px;
     color: #000;
-    height: 30px;
+    height: 31px;
     padding: 0 10px;
     text-shadow: 0 0 10px;
 
     &:hover {
-        background-color: #000;
+        background-color: rgba( 255, 255, 255, 0.25 );
         border: 1px solid #18cae6;
         border-radius: 8px;
         color: #18cae6;
