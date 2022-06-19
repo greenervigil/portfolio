@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { FC, ReactNode } from 'react';
 
 const StyledButton = styled.button`
     background-color: #18cae6;
@@ -19,12 +20,17 @@ const StyledButton = styled.button`
     }
 `;
 
-const Button = ({ label, icon }) => {
+interface ButtonProps {
+  label: string;
+  icon?: JSX.Element;
+}
+
+const Button: FC<ButtonProps> = ({ label, icon }) => {
   return (
     <StyledButton
       type="button"
     >
-      {icon}{label}
+      {icon}&nbsp;&nbsp;{label}
     </StyledButton>
   );
 };
