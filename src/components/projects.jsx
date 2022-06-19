@@ -85,7 +85,7 @@ const Container = styled.ul`
     div h1, div p {
         width: 90%;
         padding: 0 5%;
-        background-color:#18cae6; 
+        background-color:rgba( 104, 215, 217, 0.85 ); 
         font-family: 'Raleway', sans-serif;
         
         -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
