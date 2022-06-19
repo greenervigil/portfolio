@@ -189,7 +189,7 @@ const Contact = () => {
 
 
     return (
-      <StyledDiv>
+      <StyledDiv id="contact">
         <div className="content" >
             <div className="envelope" ref={tl} onClick={openCard}></div>
             <div className="letter">
