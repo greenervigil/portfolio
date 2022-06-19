@@ -7,7 +7,7 @@ import styled from "@emotion/styled";
 import background from '../assets/images/yinM3E.jpg';
 import Container from "./container/container";
 import Button from "./button/button";
-import Box from "./box/box";
+import Card from "./card/card";
 
 const StyledDiv = styled.div`
     width: 100vw;
@@ -40,7 +40,7 @@ const About = () => {
     return (
         <StyledDiv>
             <Section>
-                <Box id="about">
+                <Card id="about">
                     <h1>{content.name}</h1>
                     <h4 dangerouslySetInnerHTML={{ __html: content.title }}></h4>
 
@@ -67,7 +67,7 @@ const About = () => {
                             <FontAwesomeIcon icon={faGithub} size="xl" color="#18cae6" />
                         </a>
                     </div>
-                </Box>
+                </Card>
             </Section>
         </StyledDiv>
     );

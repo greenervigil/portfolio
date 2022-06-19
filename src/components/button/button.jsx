@@ -10,11 +10,12 @@ const StyledButton = styled.button`
     text-shadow: 0 0 10px;
 
     &:hover {
-        background-color: rgba( 255, 255, 255, 0.25 );
+        background-color: rgba( 104, 215, 217, 0.15 );
         border: 1px solid #18cae6;
         border-radius: 8px;
         color: #18cae6;
         text-shadow: 0 0 10px;
+        box-shadow: 0 8px 32px 0 #18cae6;
     }
 `;
 
