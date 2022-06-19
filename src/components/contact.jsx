@@ -3,15 +3,12 @@ import gsap from 'gsap-trial';
 import { CSSRulePlugin } from 'gsap-trial/CSSRulePlugin';
 
 import styled from "@emotion/styled";
-import background from '../assets/images/yinM3E.jpg'
+import Button from '../components/button/button';
+import background from '../assets/images/yinM3E.jpg';
 
 gsap.registerPlugin(CSSRulePlugin);
 
 const StyledDiv = styled.div`
-  
-`;
-
-const Container = styled.div`
     min-height: 50vh;
     display: flex;
     justify-content: center;
@@ -40,13 +37,11 @@ const Container = styled.div`
         height: 165px;
         z-index: 15;
         border-radius: 2px;
-        background: #000;
-        box-shadow: 0px 1px 7px -2px #18cae6;
       
         .body {
           position: relative;
-          width: 240px;
-          height: 120px;
+          width: 100%;
+          height: 165px;
           color: #000;
           
           .close {
@@ -65,36 +60,31 @@ const Container = styled.div`
            } 
 
            form {
-              background-color: #000;
+              background: rgba( 104, 215, 217, 0.15 );
               color: #fff;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
               text-shadow: 0 0 10px;
               padding: 10px;
+              height: 90%;
+              box-shadow: 0px 1px 7px -2px #18cae6;
+              -webkit-backdrop-filter: blur( 5px );
+              border-radius: 10px;
+              border: 1px solid rgba( 255, 255, 255, 0.18 );
            }
 
            label: {
                 margin-right: 5px;
             }
            input {
-             width: 60%;
+             width: 70%;
              margin: 5px;
+             border: 1px solid rgba( 255, 255, 255, 0.18);
            }
-
-           button {
-            background-color: #18cae6;
-            border: 1px solid #18cae6;
-            border-radius: 10px;
-            text-decoration: none;
-            text-shadow: 0 0 10px;
-            color: #000;
-          }
-    
-           button:hover {
-            background-color: #000;
-            border: 1px solid #18cae6;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #18cae6;
-          }
+           textarea {
+            width: 75%;
+           }
         }
       }
       
@@ -199,34 +189,36 @@ const Contact = () => {
 
 
     return (
-        <StyledDiv id="contact">
-            <Container>
-            <div className="content" >
-                <div className="envelope" ref={tl} onClick={openCard}></div>
-                <div className="letter">
-                <div className="body">
-                    <form action="https://formsubmit.co/a3e41e802167824b816157ab86b16ea2" method="POST">
-                      <label htmlFor='name'>Name&nbsp;</label>
-                      <input type="text" name="name" id="name" required />
-                      <label htmlFor='email'>Email&nbsp;</label>
-                      <input type="email" name="email" id='email' required />
-                      
-                      <label htmlFor='message'>Message</label>
-                      <textarea name="message" id='message' placeholder="Send me your details"></textarea>
+      <StyledDiv>
+        <div className="content" >
+            <div className="envelope" ref={tl} onClick={openCard}></div>
+            <div className="letter">
+              <div className="body">
+                <form action="https://formsubmit.co/a3e41e802167824b816157ab86b16ea2" method="POST">
+                  <div>
+                    <label htmlFor='name'>Name&nbsp;</label>
+                    <input type="text" name="name" id="name" required />
+                  </div>
+                  <div>
+                    <label htmlFor='email'>Email&nbsp;</label>
+                    <input type="email" name="email" id='email' required />
+                  </div>
+                  
+                  <label htmlFor='message'>Message</label>
+                  <textarea name="message" id='message' placeholder="Send me your details"></textarea>
 
-                      <input type="hidden" name="_subject" value="New Contact Request!"></input>
-                      <input type="text" name="_honey" style={{ display: 'none' }} />
-                      <input type="hidden" name="_template" value="box"></input>
-                      
-                      <button type="submit">Send</button>
-                      {/*<span className='close' onClick={closeCard}>Submit</span>*/}
-                    </form>
-                </div>
-                </div>
-                <div className="shadow"></div>
+                  <input type="hidden" name="_subject" value="New Contact Request!"></input>
+                  <input type="text" name="_honey" style={{ display: 'none' }} />
+                  <input type="hidden" name="_template" value="box"></input>
+                  
+                  <Button type="submit" label="Submit" />
+                  {/*<span className='close' onClick={closeCard}>Submit</span>*/}
+                </form>
+              </div>
             </div>
-            </Container> 
-        </StyledDiv>
+            <div className="shadow"></div>
+        </div>
+      </StyledDiv> 
     )
 }
 
