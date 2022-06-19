@@ -3,21 +3,21 @@ import styled from "@emotion/styled";
 const Div = styled.div`
     /* The actual timeline (the vertical ruler) */
     .timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
     }
 
     /* The actual timeline (the vertical ruler) */
     .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #18cae6;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #18cae6;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
     }
 
     /* Container around content */
