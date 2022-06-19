@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { FC } from "react";
 import ProgressBar from "./progressBar";
 
 const Timeline = styled.main`
@@ -16,7 +17,7 @@ const Timeline = styled.main`
     }
 `;
 
-const Exp = () => {
+const Exp: FC = () => {
     return (
         <Timeline id="experience">
             <div className="progressbars">
