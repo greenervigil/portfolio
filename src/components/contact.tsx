@@ -1,9 +1,9 @@
-import { useRef, useEffect } from 'react';
+import { FC, useRef, useEffect } from 'react';
 import gsap from 'gsap-trial';
 import { CSSRulePlugin } from 'gsap-trial/CSSRulePlugin';
 
 import styled from "@emotion/styled";
-import Button from '../components/button/button';
+import Button from './button/button';
 import Input from './input/input';
 
 gsap.registerPlugin(CSSRulePlugin);
@@ -144,9 +144,9 @@ const StyledDiv = styled.div`
       }      
 `;
 
-const Contact = () => {
-    const tl = useRef();
-    const t2 = useRef();
+const Contact: FC = () => {
+    const tl: any = useRef();
+    const t2: any = useRef();
     
     function openCard() {
         tl.current.play();
