@@ -8,6 +8,7 @@ import About from "./components/about";
 import Exp from "./components/exp";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import { FC } from "react";
 
 const H1 = styled.h1`
     font-family: 'Ubuntu';
@@ -18,13 +19,13 @@ const H1 = styled.h1`
     margin: 100px 0;
 `;
 
-const App = () => {
-  const width = window.innerWidth;
+const App: FC = () => {
+  const width: Number = window.innerWidth;
   return (
     <>
-      {width > '900' ? <Sidebar /> : <Mobilebar />}
+      {width > 900 ? <Sidebar /> : <Mobilebar />}
       
-      {width > '900' && <Home /> }
+      {width > 900 && <Home /> }
       <About />
       <H1>Experience</H1>
       <Exp />
