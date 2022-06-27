@@ -93,6 +93,16 @@ const Container = styled.ul`
         transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
     }
 
+    div a {
+        width: 90%;
+        padding: 0 5%;
+        font-family: 'Raleway', sans-serif;
+
+        -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+        -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+        transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+    }
+
     li h1 {
         bottom: 110%;
         font-style: italic;
@@ -122,6 +132,9 @@ const Container = styled.ul`
 
     li p a {
         text-decoration: none;
+        padding-top: 50%;
+        top: 110%;
+        padding-bottom: 50%;
     }
 
     li div:hover h1 {
@@ -131,6 +144,12 @@ const Container = styled.ul`
 
     li div:hover p {
         top: 45%;
+        padding-top: 10%;
+    }
+
+    li div:hover a {
+        top: 60%;
+        left: 1%;
         padding-top: 10%;
     }
 `;
