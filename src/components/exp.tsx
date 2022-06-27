@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { faCss3, faHtml5, faJs } from "@fortawesome/free-brands-svg-icons";
 import { FC } from "react";
 import ProgressBar from "./progressBar";
 
@@ -21,16 +22,16 @@ const Exp: FC = () => {
     return (
         <Timeline id="experience">
             <div className="progressbars">
-                <ProgressBar title={'HTML'} percentage={90}/>
-                <ProgressBar title={'CSS'} percentage={80}/>
-                <ProgressBar title={'JS'} percentage={90}/>
-                <ProgressBar title={'TS'} percentage={70}/>
+                <ProgressBar title={'HTML5'} percentage={90} />
+                <ProgressBar title={'CSS3'} percentage={80} />
+                <ProgressBar title={'JavaScript'} percentage={90} />
+                <ProgressBar title={'TypeScript'} percentage={70} />
             </div>
             <div className="progressbars">
                 <ProgressBar title={'React'} percentage={90}/>
                 <ProgressBar title={'NextJS'} percentage={50}/>
-                <ProgressBar title={'SB'} percentage={70}/>
-                <ProgressBar title={'WP'} percentage={40}/>
+                <ProgressBar title={'Storybook'} percentage={70}/>
+                <ProgressBar title={'Wordpress'} percentage={40}/>
             </div>
             <div className="progressbars">
                 <ProgressBar title={'Java'} percentage={60}/>
@@ -38,9 +39,9 @@ const Exp: FC = () => {
                 <ProgressBar title={'Python'} percentage={20}/>
             </div>
             <div className="progressbars">
-                <ProgressBar title={'RN'} percentage={50}/>
-                <ProgressBar title={'IOS'} percentage={20}/>
-                <ProgressBar title={'Android'} percentage={40}/>
+                <ProgressBar title={'React Native'} percentage={50}/>
+                <ProgressBar title={'IOS (Swift)'} percentage={20}/>
+                <ProgressBar title={'Android (Java, Kotlin)'} percentage={40}/>
             </div>
         </Timeline>
     )

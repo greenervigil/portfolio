@@ -1,4 +1,5 @@
 import styled from "@emotion/styled"
+import { FC } from "react";
 
 const Progress = styled.div`
     position: relative;
@@ -6,16 +7,26 @@ const Progress = styled.div`
     height: 170px;
     margin: 1em;
     text-shadow: 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .circularProgressbar-text {
         box-shadow: 0 0 10px;
         transition: 3s ease;
+        padding: 5px 0;
+        color: #d6d6d6;
     }
-
 `;
 
+interface progressProps {
+    strokeWidth?: number;
+    title: string;
+    percentage: number;
+}
 
-const ProgressBar = ({strokeWidth = 5, title, percentage}) => {
+const ProgressBar: FC<progressProps> = ({strokeWidth = 5, title, percentage }) => {
     const radius = (50 - strokeWidth / 2);
     const pathDescription = `
       M 50,50 m 0,-${radius}
@@ -23,7 +34,7 @@ const ProgressBar = ({strokeWidth = 5, title, percentage}) => {
       a ${radius},${radius} 0 1 1 0,-${2 * radius}
     `;
     const diameter = Math.PI * 2 * radius;
-    const progressStyle = {
+    const progressStyle: {} = {
         stroke: '#18cae6',
         strokeLinecap: 'round',
         strokeDasharray: `${diameter}px ${diameter}px`,
@@ -35,8 +46,8 @@ const ProgressBar = ({strokeWidth = 5, title, percentage}) => {
             <svg
                 className={'CircularProgressbar'}
                 viewBox="0 0 100 100"
-				width={100}
-				height={100}
+				width={110}
+				height={110}
             >
                 <path
                     className="CircularProgressbar-trail"
@@ -55,19 +66,19 @@ const ProgressBar = ({strokeWidth = 5, title, percentage}) => {
                     fillOpacity={0}
                     style={progressStyle}
                 />
-
-                <text
-                    className="CircularProgressbar-text"
-                    x={50}
-                    y={50}
-					style={{
-						fill: '#d6d6d6',
-  					fontSize: '20px',
-  					dominantBaseline: 'central',
-  					textAnchor: 'middle',
-					}}
-                >{title}</text>
-            </svg>      
+                
+            </svg>    
+            <text
+                className="CircularProgressbar-text"
+                x={50}
+                y={50}
+                style={{
+                    color: '#d6d6d6',
+                    fontSize: '20px',
+                    dominantBaseline: 'central',
+                    textAnchor: 'middle',
+                }}
+            >{title}</text> 
         </Progress>
     )
 }
