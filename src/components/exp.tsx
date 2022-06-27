@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { faCss3, faHtml5, faJs } from "@fortawesome/free-brands-svg-icons";
 import { FC } from "react";
 import ProgressBar from "./progressBar";
 

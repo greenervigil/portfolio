@@ -120,13 +120,17 @@ const Container = styled.ul`
         padding-bottom: 50%;
     }
 
+    li p a {
+        text-decoration: none;
+    }
+
     li div:hover h1 {
         bottom: 45%;
         padding-bottom: 10%;
     }
 
     li div:hover p {
-        top: 40%;
+        top: 45%;
         padding-top: 10%;
     }
 `;
@@ -139,28 +143,36 @@ const Projects = () => {
                 <div>
                     <img src={animation} alt="Creative Studios animation calculator tool wordpress page" />
                     <h1>Cengage Group - Creative Studios </h1>
-                    <p>Animation Calculator Tool Wordpress page</p>
+                    <p>Animation Calculator Tool</p>
+                    <br/>
+                    <a style={{fontSize: '20px'}} href='https://cs.cengage.com/animation-calculator' target='_blank' rel='noreferrer'>Go</a>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={nglMarketing} alt="National Geographic Learning Marketing site for Secondary Education" />
                     <h1>NGL Secondary Marketing</h1>
-                    <p>National Geographic Learning Marketing site for Secondary education through Cengage Group.</p>
+                    <p>National Geographic Learning Marketing site for Secondary education</p>
+                    <br/>
+                    <a style={{fontSize: '20px'}} href='https://ngl.cengage.com' target='_blank' rel='noreferrer'>Go</a>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={bigIdeas} alt="Big Ideas Mathematics Marketing campaign for National Geographic Learning" />
                     <h1>NGL Big Ideas Mathematics</h1>
-                    <p>Big Ideas 7 page Marketing Campaign through Cengage Group.</p>
+                    <p>Big Ideas 7 page Marketing Campaign</p>
+                    <br/>
+                    <a style={{fontSize: '20px'}} href='https://ngl.cengage.com/assets/html/bigIdeas' target='_blank' rel='noreferrer'>Go</a>
                 </div>
             </li>
             <li>
                 <div>
                     <img src={digitalAccess} alt="National Geographic Learning Digital Access Campaign for secondary education" />
                     <h1>NGL Digital Access</h1>
-                    <p>6 Page Digital Access Campaign for National Geographic Learning Secondary Education through Cengage Group.</p>
+                    <p>Digital Access 6 Page Campaign</p>
+                    <br/>
+                    <a style={{fontSize: '20px'}} href='https://ngl.cengage.com/assets/html/digitalAccess' target='_blank' rel='noreferrer'>Go</a>
                 </div>
             </li>
             <li className="pusher"></li>
@@ -169,14 +181,18 @@ const Projects = () => {
                 <div>
                     <img src={expressAnimations} alt="Creative Studios Wordpress site" />
                     <h1>Cengage Group - Creative Studios</h1>
-                    <p>Pages to Creative Studios wordpress site.</p>
+                    <p>Creative Studios wordpress site</p>
+                    <br/>
+                    <a style={{fontSize: '20px'}} href='https://cs.cengage.com' target='_blank' rel='noreferrer'>Go</a>
                 </div>
             </li>
             <li>
                 <div>
-                    <img src={galsBestPals} alt="Creative Studios Wordpress site" />
+                    <img src={galsBestPals} alt="Gals Best Pal Wordpress site" />
                     <h1>Gals Best Pal - Non Profit Dog Rescue</h1>
-                    <p>Site for Dog Foster / Adoption group.</p>
+                    <p>Gals' Best Pal Dog Foster site</p>
+                    <br/>
+                    <a style={{fontSize: '20px'}} href='https://galsbestpal.com' target='_blank' rel='noreferrer'>Go</a>
                 </div>
             </li>
         </Container>
