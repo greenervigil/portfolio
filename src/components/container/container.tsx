@@ -6,13 +6,13 @@ const Div = styled.div`
 `;
 
 interface ContainerProps {
-    text: string;
+    children?: JSX.Element;
 }
 
-const Container: FC<ContainerProps> = ({ text }) => {
+const Container: FC<ContainerProps> = ({ children }) => {
     return (
-        <Div>
-            <p>{text}</p>
+        <Div data-testid='container'>
+            {children}
         </Div>
     );
 }
