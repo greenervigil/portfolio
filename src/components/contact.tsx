@@ -1,9 +1,8 @@
 import { FC, useRef, useEffect } from 'react';
 import gsap from 'gsap-trial';
-import { CSSRulePlugin } from 'gsap-trial/CSSRulePlugin';
+import CSSRulePlugin from 'gsap-trial/CSSRulePlugin';
 
 import styled from "@emotion/styled";
-import Button from './button/button';
 import Input from './input/input';
 
 gsap.registerPlugin(CSSRulePlugin);
