@@ -7,7 +7,8 @@ const StyledLabel = styled.label`
 
 const StyledInput = styled.input`
     width: 60%;
-    border: 1px solid rgba( 255, 255, 255, 0.18);
+    border: 1px solid #18cae6;
+    border-radius: 4px;
 `;
 
 const Div = styled.div`

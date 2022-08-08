@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styled from "@emotion/styled";
@@ -45,7 +45,9 @@ const About: FC = () => {
                     <h1>{content.name}</h1>
                     <h4 dangerouslySetInnerHTML={{ __html: content.title }}></h4>
 
-                    <Container text={content.aboutText}/>
+                    <Container>
+                        <p>{content.aboutText}</p>
+                    </Container>
 
                     <div className="social">
                         <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/danieljvigil/">
@@ -61,9 +63,14 @@ const About: FC = () => {
                         </a>
                     </div>
 
-                    <Container text={content.greenfield} />
+                    <Container>
+                        <p>{content.aboutText}</p>
+                    </Container>
 
                     <div className="social">
+                        <a target="_blank" rel="noreferrer" href="https://greenfield-org.github.io/">
+                            <FontAwesomeIcon icon={faGlobe} size={'lg'} color="#18cae6" />
+                        </a>
                         <a target="_blank" rel="noreferrer" href="https://github.com/GreenField-Org">
                             <FontAwesomeIcon icon={faGithub} size={'lg'} color="#18cae6" />
                         </a>

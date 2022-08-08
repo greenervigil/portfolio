@@ -7,6 +7,11 @@ import Input from './input/input';
 
 gsap.registerPlugin(CSSRulePlugin);
 
+const Textarea = styled.textarea`
+  border: 1px solid #18cae6;
+  border-radius: 4px;
+`;
+
 const StyledDiv = styled.div`
     min-height: 50vh;
     display: flex;
@@ -211,7 +216,7 @@ const Contact: FC = () => {
                   <Input type="email" name="email" id="email" label="Email" />
                   
                   <label htmlFor='message'>Message</label>
-                  <textarea name="message" id='message' placeholder="Send me your details"></textarea>
+                  <Textarea name="message" id='message' placeholder="Send me your details"></Textarea>
 
                   <input type="hidden" name="_subject" value="New Contact Request!"></input>
                   <input type="text" name="_honey" style={{ display: 'none' }} />

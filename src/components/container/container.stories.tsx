@@ -1,5 +1,4 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
 
 import Container from './container';
 
@@ -12,5 +11,5 @@ const Template: ComponentStory<typeof Container> = (args) => <Container {...args
 
 export const Primary = Template.bind({});
 Primary.args = {
-    text: 'This is a text piece of content.'
+    children: <p>This is a text piece of content.</p>
 };

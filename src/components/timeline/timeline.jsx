@@ -129,7 +129,10 @@ const Div = styled.div`
 
 const Timeline = () => {
     return (
-        <Div className="timeline">
+        <div class="viewport">
+  <div class="scene3D-container">
+    <div class="scene3D">
+        {/*<Div className="timeline">*/}
             <div className="container right">
                 <div className="content">
                 <h2>2021</h2>
@@ -193,7 +196,8 @@ const Timeline = () => {
                 <p>Developed operational solutions to support the End to End Systems integration for the Payment &amp; Deposit Operations departments. Developed End to End operational process flows and Business requirements converting paper processes to virtual proceses improving distribution of funds from 3 day average to 12 hours.</p>
                 </div>
             </div>
-        </Div>
+        {/*</Div>*/}
+        </div></div></div>
     )
 }
 
