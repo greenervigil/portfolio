@@ -64,7 +64,7 @@ const About: FC = () => {
                     </div>
 
                     <Container>
-                        <p>{content.aboutText}</p>
+                        <p>{content.greenfield}</p>
                     </Container>
 
                     <div className="social">
