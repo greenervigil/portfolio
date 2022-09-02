@@ -5,8 +5,17 @@ import background from '../assets/images/freevector-19-trons.jpg';
 
 const Section = styled.section`
   height: 100vh;
+  width: 100vw;
   font-size: 5rem;
   background-image: url(${background});
+  background-size: cover;
+	background-position: 50% 50%;
+	background-blend-mode: soft-light;
+
+	display: grid;
+	place-items: center;
+	text-align: center;
+	font-size: calc(4vw + 1em);
 
   ul {
     list-style-type: none;
